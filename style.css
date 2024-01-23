@@ -1,0 +1,18 @@
+.header{
+    border: solid 1px black;
+    height: 70px;
+    width: 100%;
+}
+.overview{
+    margin-top: 50px;
+    border: solid 1px black;
+    height: 550px;
+    width: 100%;
+}
+.inscripciones{
+    border: solid 1px black;
+    border-radius: 5px; 
+    height: 150px;
+    width: 100%;
+    margin-top: 10px;
+}
