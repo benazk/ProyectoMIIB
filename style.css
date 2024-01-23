@@ -42,7 +42,10 @@
     align-items: center;
     text-decoration: none;
 }
-
+.buscador-form:hover >.buscador-form_txt{
+    width: 100px;
+    padding: 0 6px;
+} 
 .buscador-form_txt{
     border: none;
     width: 100px; 
