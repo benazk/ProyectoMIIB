@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservaHotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ReservasHotel.xsd">
+    <inscripcion DNI="12345678X">
+        <nombre>Manuel</nombre>
+        <apellido>Garcia</apellido>
+        <fecha>2024-12-10</fecha>
+        <integrantesCant>2</integrantesCant>
+        <email>Nuevo.Email@gmail.com</email>
+        <telefono>658992210</telefono>
+    </inscripcion>
+</reservaHotel>
