@@ -20,9 +20,19 @@
 .inscripciones{
     border: solid 1px black;
     border-radius: 5px; 
-    height: 100px;
+    height: 120px;
     width: 100%;
     margin-top: 10px;
+    
+    
+}
+.menu{
+    
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+
+    text-align: center;
+    outline: none;
 }
 #overview{
     display: grid;
@@ -88,7 +98,10 @@
     align-items: center;
     text-decoration: none;
 }
-
+.buscador-form:hover >.buscador-form_txt{
+    width: 100px;
+    padding: 0 6px;
+} 
 .buscador-form_txt{
     border: none;
     width: 100px; 
