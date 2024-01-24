@@ -23,7 +23,8 @@
     
     display: grid;
     grid-template-columns: 34% 33% 33%;
-    padding-left: 18%;
+
+    text-align: center;
     outline: none;
 }
 .informacion{
