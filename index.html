@@ -1,40 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLA</title>
+<html lang="es">
+  <head>
+    <title>restaurante</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header">
-        <h1 id="titulo">BIMM</h1>
-        <img class="logo" src="/imagenes/logo.jpg" alt="">
-
-        <div class="buscador-form">
-            <input class="buscador-form_txt" type="text" placeholder="Busca..." name="" id="">
-            <button class="buscador-form_btn"><img class="buscador-form_img" style="height: 13px; width: 100%;" src="imagenes/buscador.png" alt="image"></button>
-        </div>
+  </head>
+  <body>
+    <h1>RESERVA RESTAURANTE</h1>
+    <div class="container">
+      <div class="cta-form">
+        <h2>¡Rellena el formulario!</h2> 
+      </div>
+      <form action="" class="form">
         
-        <img class="menu" src="/imagenes/hamburguesa.png" alt="">
-
+        <input type="text" placeholder="Nombre" class="form__input" id="name" />
+        <label for="name" class="form__label">Nombre</label>
+  
+        <input type="email" placeholder="Email" class="form__input" id="email" />
+        <label for="email" class="form__label">Email</label>
+  
+        <input type="text" placeholder="Extra" class="form__input" id="subject" />
+        <label for="subject" class="form__label">*</label>
+        
+      </form>
     </div>
-    <div class="overview">
-        <img class="foto_overwiew" src="/imagenes/overview.png" alt="">
-        <h1>IMAGEN</h1>
-    </div>
-    <div class="inscripciones">
-        <h1>FORMULARIO</h1>
-        <form action="insert.php"></form>
-    </div>
-    <div class="informacion">
-        <h1>INFORMACION</h1>
-    </div>
-    <div class="mas_info">
-        <div id="mapa">mapa</div>
-        <div id="contacto">contacto</div>
-    </div>
-   
-    
-</body>
+  </body>
 </html>
