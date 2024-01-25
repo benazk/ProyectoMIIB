@@ -29,7 +29,7 @@
 .menu{
     
     display: grid;
-    grid-template-columns: 34% 33% 33%;
+    grid-template-columns: 50% 50%;
 
     text-align: center;
     outline: none;
