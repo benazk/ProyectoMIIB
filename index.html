@@ -6,20 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOLA</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <div id="gris"></div>
     <div class="header">
-        <h1 id="titulo">BIMM</h1>
-        <img class="logo" src="/imagenes/.png" alt="">
 
-        <div class="buscador-form">
-            <input class="buscador-form_txt" type="text" placeholder="Busca..." name="" id="">
-            <button class="buscador-form_btn"><img class="buscador-form_img" style="height: 13px; width: 100%;"
-                    src="imagenes/buscador.png" alt="image"></button>
-        </div>
-
-        <img class="menu" src="/imagenes/hamburguesa.png" alt="">
+        <h1 id="titulo">MIIB</h1>
+        <button class="menu_button"><img src="imagenes/menu.png" alt=""></button>
 
     </div>
     <div class="overview_image">
@@ -27,23 +22,18 @@
     </div>
     <div class="inscripciones">
         <h2 style="text-align: center;">Elige evento</h2>
-        <div class="menu">  
+        <div class="menu">
             <div class="restaurante"><a href="rest.html">
-                <h3>Restaurante</h3>
-            </a></div>
+                    <h3>Restaurante</h3>
+                </a></div>
             <div class="gimnasio"><a href="gym.html">
-                <h3>Gimnasio</h3>
-            </a></div>      
+                    <h3>Gimnasio</h3>
+                </a></div>
         </div>
         <form action="insert.php"></form>
     </div>
     <div id="informacion">
         <div id="overview">
-            <div class="info_overview">
-                <h2>HOTEL</h2>
-                <img src="imagenes/placeholder.png" alt="">
-                <button class="leer_mas"><a href="#hotel">Leer Mas</a></button>
-            </div>
             <div class="info_overview">
                 <h2>RESTAURANTE</h2>
                 <img src="imagenes/placeholder.png" alt="">
@@ -55,6 +45,12 @@
                 <button class="leer_mas"><a href="#gym">Leer Mas</a></button>
             </div>
         </div>
+        <div class="galeria">
+            <button id="exit_galeria" onclick="ocultarGaleria()"><img src="imagenes/exit.png" alt=""></button>
+        </div>
+        <button class="Galeria_button" id="mostrarGaleria" onclick="mostrarGaleria()">
+            <h2>GALERIA DE IMAGENES</h2>
+        </button>
         <div class="info">
             <div class="container" id="restaurante">
                 <img src="imagenes/placeholder.png" alt="">
@@ -121,7 +117,6 @@
             <div id="contacto">contacto</div>
         </div>
     </div>
-
 
 </body>
 
