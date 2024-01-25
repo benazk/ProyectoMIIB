@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservaRestaurante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ReservasRestaurante.xsd">
+    <Reserva>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+        <Fecha>2024-02-18T11:30:00</Fecha>
+        <Nombre>Juanjose</Nombre>
+    </Reserva>
+</reservaRestaurante>
