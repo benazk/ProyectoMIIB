@@ -9,7 +9,7 @@
                             <xs:element name="tipoMenu">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:enumeration value="Pescado + postre"/>
+                                        <xs:enumeration value="Pescado"/>
                                         <xs:enumeration value="Marisco"/>
                                         <xs:enumeration value="Carne"/>
                                         <xs:enumeration value="Pollo"/>
