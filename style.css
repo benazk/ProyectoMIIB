@@ -2,9 +2,10 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    
-    
+   
+   
 }
+
 
 #gris{
     display: none;
@@ -19,6 +20,7 @@ html, body {
     border: solid 1px black;
     height: 150px;
     width: 100%;
+
 
 }
 .menu_button img{
@@ -44,10 +46,12 @@ html, body {
     z-index: 2;
 }
 
+
 #imagen_portada {
     height: 1000px;
     border: solid 7px purple;
 }
+
 
 .overview_image {
     margin-top: 15px;
@@ -56,7 +60,9 @@ html, body {
     width: max-content;
 }
 
+
 .overview_image img {}
+
 
 .inscripciones {
     border: solid 1px black;
@@ -66,15 +72,20 @@ html, body {
     margin-top: 10px;
 
 
+
+
 }
 
+
 .menu {
+
 
     display: grid;
     grid-template-columns: 50% 50%;
     text-align: center;
     outline: none;
 }
+
 
 #overview {
     display: grid;
@@ -85,15 +96,18 @@ html, body {
     width: 100%;
 }
 
+
 .info_overview {
     border: solid 2px red;
     margin: 50px;
     width: 70%;
 }
 
+
 .info_overview h2 {
     text-align: center;
 }
+
 
 .info_overview img {
     height: 75%;
@@ -102,6 +116,7 @@ html, body {
     left: 5%;
     right: 5%;
 }
+
 
 .galeria {
     border: solid 2px magenta;
@@ -127,12 +142,24 @@ html, body {
     border: none;
 }
 
+
 #exit_galeria img{
     margin-top: 50%;
     margin-left: 50%;
     height: 20px;
     width: 20px;
 }
+#ocultarBarra{
+    height: 30px;
+    width: auto;
+    border: none;
+}
+#ocultarBarra img{
+    height: 20px;
+    width: auto;
+    
+}
+
 
 .leer_mas {
     position: relative;
@@ -140,11 +167,14 @@ html, body {
     width: 100%;
     height: 12.8%;
 
+
 }
+
 
 .leer_mas a {
     transition: all 0.5s;
 }
+
 
 .container {
     position: relative;
@@ -155,10 +185,12 @@ html, body {
     border: solid 2px red;
 }
 
+
 .container img {
     height: 30%;
     width: auto;
 }
+
 
 .mas_info {
     display: grid;
@@ -167,6 +199,7 @@ html, body {
     width: 100%;
     height: 20%;
 }
+
 
 .buscador-form {
     position: absolute;
@@ -182,10 +215,12 @@ html, body {
     text-decoration: none;
 }
 
+
 .buscador-form:hover>.buscador-form_txt {
     width: 100px;
     padding: 0 6px;
 }
+
 
 .buscador-form_txt {
     border: none;
@@ -200,7 +235,10 @@ html, body {
     line-height: 40px;
 
 
+
+
 }
+
 
 .buscador-form_btn {
     border: none;
@@ -213,7 +251,33 @@ html, body {
     background-color: white;
 }
 
+
 iframe {
     width: 100%;
     height: 100%;
+}
+
+
+/* CSS */
+.bottonInicio {
+  background: #3aad2a;
+  border-radius: 999px;
+  box-shadow: #3aad2a 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 12px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 0 50px;
+  margin-left: 150px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }
