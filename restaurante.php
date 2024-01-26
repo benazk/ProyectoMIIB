@@ -2,7 +2,7 @@
 <body>
 
 <?php
-    $nombre = $_GET["nombre"]
+    $nombre = $_GET["nombre"];
     $apellidos=$_GET["apellido"];
     $email=$_GET["email"];
     $telefono=$_GET["telefono"];
@@ -25,23 +25,33 @@ $usuario = "root";
 $password = "";
 $basedatos = "bbddhoteldeportivo";
 
-// Crear conexión
+// Crear conexiÃ³n
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
-// Checkear conexión
+// Checkear conexiÃ³n
 if ($conn->connect_error) {
-  die("Conexión fallida: " . $conn->connect_error);
+  die("ConexiÃ³n fallida: " . $conn->connect_error);
 }
 
 $sql_clientes = "INSERT INTO Clientes (NombreC, ApellidoC, Email, Telefono, cantPersonas, Fecha, Reserva)
-VALUES ($nombre, $apellidos, $email, $telefono, $cantidadPers, $fecha, $reserva)";
-$sql_restaurante = "SELECT idCliente FROM Restaurante INNER JOIN 
+VALUES ($nombre, $apellidos, $email, $telefono, $cantidadPers, $fecha, $que_elegido);";
+
+$sql_restaurante = "SELECT idCliente FROM ZonaReatauracion 
+INNER JOIN Clientes ON Clientes.idCliente = ZonaRestauracion.idCliente 
+WHERE Clientes.idCliente = (SELECT idCliente FROM Clientes WHERE NombreC = $nombre);"; 
+
 if ($conn->query($sql_clientes) === TRUE) {
   echo "Dado de alta satisfactoriamente";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
+if ($conn->query($sql_restaurante) === TRUE) {
+  echo "Dado de alta satisfactoriamente";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
-// Cerrar conexión
+
+// Cerrar conexiÃ³n
 $conn->close();
 ?>
 
