@@ -14,7 +14,8 @@ html {
 }
 
 body {
-  background-color: #EDEEE9;
+  background-image: url(imagenes/tropical.jpg);
+  
   color: #303030;
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
@@ -73,6 +74,7 @@ code {
 }
 
 .container {
+  
   width: 100%;
   max-width: 768px;
   display: flex;
@@ -80,7 +82,8 @@ code {
   justify-content: center;
   align-items: center;
   padding: 2rem 2rem 1.5rem;
-  background-color: #D8DBCE;
+  background-color: rgba(221, 219, 198, 0.7);
+  
 }
 
 @media (min-width: 768px) {
@@ -105,6 +108,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .form__input:last-child {
@@ -145,6 +149,7 @@ code {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  
 }
 
 .form__input:last-child:hover {
