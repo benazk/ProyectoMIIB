@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  background-image: url(imagenes/tropical.jpg);
   color: #303030;
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
@@ -80,6 +81,8 @@ code {
   align-items: center;
   padding: 2rem 2rem 1.5rem;
   background-color: #D8DBCE;
+  margin-bottom: 100px;
+  background-color: rgba(221, 219, 198, 0.7);
 }
 
 @media (min-width: 768px) {
