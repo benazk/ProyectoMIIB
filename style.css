@@ -82,7 +82,7 @@
     display: grid;
     grid-template-columns: 35% 65%;
     border: solid 1px black;
-    height: fit-content;
+    height: 500px;
 }
 
 .buscador-form{
@@ -128,5 +128,4 @@
 }
 iframe {
     width: 100%;
-    height: auto;
 }
