@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Restaurante</title>
+  <link rel="stylesheet" href="rest.css">
+</head>
+
+<body>
+  <h1>RESERVA RESTAURANTE</h1>
+  <div class="container">
+    <h2>¡Rellena el formulario!</h2>
+    <form action="restaurante.php" method="get" class="form">
+
+      <input type="text" placeholder="Nombre" class="form__input" id="nombre" name="nombre" />
+      <label for="name" class="form__label">Nombre</label>
+
+      <input type="text" placeholder="Apellido" class="form__input" id="apellido" name="apellido" />
+      <label for="apellido" class="form__label">Apellido</label>
+
+      <input type="email" placeholder="Email" class="form__input" id="email" name="email" />
+      <label for="email" class="form__label">Email</label>
+
+      <input type="tel" placeholder="Telefono" class="form__input" id="Telefono" name="telefono" />
+      <label for="tel" class="form__label">Telefono</label>
+
+      <input type="number" placeholder="CantPers" class="form__input" id="cantidadPers" name="cantidadPers" />
+      <label for="number" class="form__label">Cantidad de personas</label>
+
+      <select style="margin-bottom: 30px;" name="select" class="form__input" id="menu" name="menu">
+        <option value="0">Elige comida</option>
+        <option value="1">Pescado + postre</option>
+        <option value="2">Marisco + postre</option>
+        <option value="3">Carne + postre</option>
+        <option value="4">Pollo + postre</option>
+        <option value="5">Sopa + postre</option>
+        <option value="6">Menu Vegano</option>
+        <option value="7">Menu Proteinico</option>
+        <option value="8">Legumbres + postre</option>
+      </select>
+
+      <input type="datetime-local" placeholder="Extra" class="form__input" id="fecha" name="fecha" />
+      <label for="subject" class="form__label"></label>
+      <input type="hidden" value="restaurante" name="restaurante" id="restaurante">
+
+      <input type="submit" placeholder="Extra" class="form__input" id="subject" />
+    </form>
+    <input type="hidden" placeholder="Reserva" class="form__input" id="reserva" />
+  </div>
+</body>
+
+</html>
