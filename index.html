@@ -8,40 +8,45 @@
     <title>HOLA</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <div class="header">
+        <section>
+            <div class="content">
+              <h2>MIIB</h2>
+              <h2>MIIB</h2>
+            </div>
+          </section>
+        <button class="menu_button"><img src="imagenes/menu.png" alt="" onclick="mostrarBarra()"></button>
+    </div>
 </head>
 
 
 <body>
     <div id="gris"></div>
-    <div class="header">
-
-
-        <h1 id="titulo">MIIB</h1>
-        <button class="menu_button"><img src="imagenes/menu.png" alt="" onclick="mostrarBarra()"></button>
-
-
-    </div>
+    
     <div class="barra_lateral">
-        <button id="ocultarBarra"> <img src="imagenes/exit.png" onclick="ocultarBarra()"></button>
-        <h3>Restaurante</h3>
-        <h3>Gimnasio</h3>
-        <h3>Mapa</h3>
-        <h3>Contacto</h3>
+        <button id="ocultarBarra" class="header__link"> <img src="imagenes/exit.png" onclick="ocultarBarra()"></button>
+        <h3 ><a href="rest.html" class="header__link">Restaurante</a></h3>
+        <h3 ><a href="rest.html" class="header__link">Gimnasio</a></h3>
+        <h3 ><a href="rest.html" class="header__link">Contacto</a></h3>
+        <h3 ><a href="rest.html" class="header__link">Mapa</a></h3>
         <label for="inscripcion_menu">Inscribete! </label>
-        <a href="rest.html">Restaurante</a>
-        <a href="gym.html">Gimnasio</a>
+        <h3 ><a href="rest.html" class="header__link">Restaurante</a></h3>
+        <h3 ><a href="gym.html" class="header__link">Gimnasio</a></h3>
     </div>
     <div class="overview_image">
-        <img src="/imagenes/placeholder.png" alt="">
+        <img src="/imagenes/hotel.jpg" style="height: 1000px; width: auto; border: 3px solid white;"
+            alt="">
+        <img src="/imagenes/mujer_playa.jpg"
+            style="height: 1000px; width: 50%; margin-left: 10px; border: 3px solid white;" alt="">
     </div>
     <div class="inscripciones">
-        <h2 style="text-align: center;">Elige evento</h2>
+        <h2 style="text-align: center;">¡Regístrate ya!</h2>
         <div class="menu">
             <button class="bottonInicio" role="button"><a href="rest.html">
-                    <h3>Restaurante</h3>
+                    <h3 class="header__link">Restaurante</h3>
                 </a></button>
             <button class="bottonInicio"><a href="gym.html">
-                    <h3>Gimnasio</h3>
+                    <h3 class="header__link">Gimnasio</h3>
                 </a></button>
         </div>
         <form action="insert.php"></form>
@@ -50,12 +55,12 @@
         <div id="overview">
             <div class="info_overview">
                 <h2>RESTAURANTE</h2>
-                <img src="imagenes/placeholder.png" alt="">
+                <img src="imagenes/rest.jpg" alt="">
                 <button class="leer_mas"><a href="#restaurante">Leer Mas</a></button>
             </div>
             <div class="info_overview">
                 <h2>GYM</h2>
-                <img src="imagenes/placeholder.png" alt="">
+                <img src="imagenes/gym.png" alt="">
                 <button class="leer_mas"><a href="#gym">Leer Mas</a></button>
             </div>
         </div>

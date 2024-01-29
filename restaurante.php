@@ -51,7 +51,7 @@ if ($conn->query($sql_restaurante) === TRUE) {
 }
 
 
-// Cerrar conexiÃ³n
+// Cerrar conexión
 $conn->close();
 ?>
 
