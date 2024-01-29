@@ -140,6 +140,7 @@ body{
     
     height: fit-content;
     width: max-content;
+    
 }
 
 
@@ -171,14 +172,14 @@ body{
     height: 700px;
     width: 100%;
     
-    
 }
 
 
 .info_overview {
     border: solid 2px rgb(7, 7, 7);
-    margin: 50px;
+    margin: 40px;
     width: 70%;
+    
 }
 
 
@@ -320,6 +321,7 @@ iframe {
     touch-action: manipulation;
     vertical-align: baseline;
     width: auto;
+    
   a{
     text-decoration: none;
     }
