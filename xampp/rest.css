@@ -107,11 +107,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  color: #909090;
-  background-color: white;
 }
-
 
 .form__input:last-child {
   cursor: pointer;
@@ -156,27 +152,4 @@ code {
 .form__input:last-child:hover {
   border: 20px;
   border-color: black;
-}
-.header__link {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #6A6A6A;
-  text-decoration: none;
-  position: relative;
-}
-
-.header__link::after {
-  content: "";
-  width: 0px;
-  height: 2px;
-  background: blue;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  transition: 0.3s ease;
-}
-
-.header__link:hover::after {
-  width: 100%;
-  transition: 0.3s ease;
 }

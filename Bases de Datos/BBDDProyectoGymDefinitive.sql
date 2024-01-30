@@ -1,7 +1,30 @@
-DROP DATABASE BBDDProyectoGym;
-CREATE DATABASE BBDDProyectoGym;
-USE BBDDProyectoGym;
-SELECT * FROM Clientes;
+DROP DATABASE BBDDProyectoGym1;
+CREATE DATABASE BBDDProyectoGym1;
+USE BBDDProyectoGym1;
+SELECT * FROM Menu;
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM ZonaRestauracion;
+UPDATE ZonaRestauracion SET MesaNum = "40A" WHERE idMesa = 40;
+
+CREATE TABLE Suscripcion(
+idSubs INT AUTO_INCREMENT PRIMARY KEY,
+TipoSubs VARCHAR(40),
+PrecioSubs DOUBLE
+);
+CREATE TABLE ZonaDeporte(
+NumTarjeta INT,
+idZona INT PRIMARY KEY AUTO_INCREMENT,
+Zona VARCHAR(50)
+);
+CREATE TABLE ZonaRestauracion(
+idMesa INT PRIMARY KEY AUTO_INCREMENT,
+MesaNum VARCHAR(30)
+);
+CREATE TABLE Menu(
+idMenu INT AUTO_INCREMENT PRIMARY KEY,
+ObjetoMenu VARCHAR(50),
+Precio DOUBLE
+);
 CREATE TABLE Empleados(
 idEmpleado INT PRIMARY KEY AUTO_INCREMENT,
 NombreE VARCHAR(50),
@@ -29,7 +52,7 @@ CREATE TABLE Comensales(
 idComensal INT PRIMARY KEY AUTO_INCREMENT,
 NombreC VARCHAR(50),
 ApellidoC VARCHAR(50),
-Email Varchar(100),
+Email VARCHAR(100),
 Telefono VARCHAR(16),
 DiaYHora TIMESTAMP,
 idMesa INT,
@@ -44,22 +67,6 @@ FOREIGN KEY(idZona) REFERENCES ZonaDeporte(idZona),
 FOREIGN KEY(idDeportista) REFERENCES Deportistas(idDeportista)
 );
 
-CREATE TABLE ZonaDeporte(
-NumTarjeta INT,
-idZona INT PRIMARY KEY AUTO_INCREMENT,
-Zona VARCHAR(50)
-);
-
-CREATE TABLE Suscripcion(
-idSubs INT AUTO_INCREMENT PRIMARY KEY,
-TipoSubs VARCHAR(40),
-PrecioSubs DOUBLE
-);
-CREATE TABLE ZonaRestauracion(
-idMesa INT PRIMARY KEY AUTO_INCREMENT,
-MesaNum VARCHAR(30)
-);
-
 CREATE TABLE SeSirve(
 idMesa INT,
 idMenu INT,
@@ -67,11 +74,6 @@ FOREIGN KEY(idMesa) REFERENCES ZonaRestauracion(idMesa),
 FOREIGN KEY(idMenu) REFERENCES Menu(idMenu)
 );
 
-CREATE TABLE Menu(
-idMenu INT AUTO_INCREMENT PRIMARY KEY,
-ObjetoMenu VARCHAR(50),
-Precio DOUBLE
-);
 
 INSERT INTO Menu (objetomenu, precio) VALUES ("pescado + postre", 24),
 ("marisco + postre", 29.50),
@@ -83,3 +85,11 @@ INSERT INTO Menu (objetomenu, precio) VALUES ("pescado + postre", 24),
 ("menu vegano", 22.00),
 ("menu proteinico", 20.00)
 ;
+INSERT INTO Suscripcion (TipoSubs, PrecioSubs) VALUES ("Una Sesion", 20.0 ),
+("Dos Sesiones", 35.00 ),
+("Semanal", 60.00 ),
+("Mensual", 120.00 ),
+("Dos Meses", 220.00 ),
+("Seis Meses", 600.00 ),
+("Anual", 1000.00); 
+ALTER TABLE Deportistas ADD idZona;
