@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-image: url(imagenes/tropical.jpg);
+  background-image: url(../imagenes/tropical.jpg);
   
   color: #303030;
   font-family: 'Inter', sans-serif;
