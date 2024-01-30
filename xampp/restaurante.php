@@ -7,9 +7,11 @@
     $email=$_GET["email"];
     $telefono=$_GET["telefono"];
     $fecha=$_GET["fecha"];
+    $fecha_format = substr($fecha, 0, 10) . ' ' . substr($fecha, 11, 5) . ':00';
     $menu=$_GET["menu"];
-    $mesa = rand (1,40)
-    $mesanum = $mesa + "A";
+    $mesa = rand (1,40);
+    $cod = "A";
+    $num_mesa = $mesa . '' . $cod; 
 ?>   
 
 Datos recibidos:<br>
@@ -17,24 +19,25 @@ Nombre: <?php echo $nombre; ?><br>
 apellido: <?php echo $apellidos; ?><br>
 email: <?php echo $email; ?><br>
 telefono: <?php echo $telefono; ?><br>
-fecha: <?php echo $fecha; ?><br>
+fecha: <?php echo $fecha_format; ?><br>
 menu: <?php echo $menu; ?><br>
 mesa: <?php echo $mesa; ?><br>
 <?php
 $servidor = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
 $usuario = "admin";
-$password = "benala139";
-$basedatos = "bbddproyectogym";
+$password = "ASdiioqw--ad45";
+$basedatos = "BBDDProyectoGym";
 
-// Crear conexiÃ³n
+// Crear conexión
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
-// Checkear conexiÃ³n
+// Checkear conexión
 if ($conn->connect_error) {
-  die("ConexiÃ³n fallida: " . $conn->connect_error);
+  die("Conexión fallida: " . $conn->connect_error);
 }
 
 $sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMenu, idMesa)
-VALUES ($nombre, $apellidos, $email, $telefono, $fecha, $menu, $mesa);";
+VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', 1, $mesa);";
+
 
 if ($conn->query($sql_comensales) === TRUE) {
   echo "Dado de alta satisfactoriamente";
