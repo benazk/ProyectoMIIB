@@ -141,8 +141,7 @@ body {}
   align-items: center;
   position: relative;
   width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  
 }
 
 #foto1 {
@@ -193,8 +192,9 @@ body {}
     "a b c";
   margin-top: 10px;
   height: 700px;
-  width: 100%;
+  width: 88%;
   margin-left: 6%;
+  margin-right: 6%
 }
 
 

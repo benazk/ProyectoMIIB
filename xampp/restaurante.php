@@ -26,7 +26,7 @@ mesa: <?php echo $mesa; ?><br>
 $servidor = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
 $usuario = "admin";
 $password = "ASdiioqw--ad45";
-$basedatos = "BBDDProyectoGym";
+$basedatos = "BBDDProyectoGym1";
 
 // Crear conexión
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
