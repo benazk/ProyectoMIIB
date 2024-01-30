@@ -26,7 +26,7 @@ mesa: <?php echo $mesa; ?><br>
 $servidor = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
 $usuario = "admin";
 $password = "ASdiioqw--ad45";
-$basedatos = "BBDDProyectoGym";
+$basedatos = "BBDDProyectoGym1";
 
 // Crear conexión
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
@@ -35,8 +35,8 @@ if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMenu, idMesa)
-VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', 1, $mesa);";
+$sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMesa, idMenu)
+VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', 1, $num_mesa);";
 
 
 if ($conn->query($sql_comensales) === TRUE) {
