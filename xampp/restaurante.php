@@ -36,7 +36,7 @@ if ($conn->connect_error) {
 }
 
 $sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMesa, idMenu)
-VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', 1, $num_mesa);";
+VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', $mesa, $menu);";
 
 
 if ($conn->query($sql_comensales) === TRUE) {
