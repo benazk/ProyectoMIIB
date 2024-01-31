@@ -30,14 +30,14 @@ $basedatos = "BBDDProyectoGym1";
 
 // Crear conexión
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
-// Checkear conexión
+// Chequear conexión
 if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 
 $sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMesa, idMenu)
-VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', $mesa, $menu);";
-$sql_servir = "INSERT INTO SeSirve (idMesa, idMenu) VALUES ($mesa, $menu);";
+VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', '$mesa', '$menu');";
+$sql_servir = "INSERT INTO SeSirve (idMesa, idMenu) VALUES ('$mesa', '$menu');";
 
 if ($conn->query($sql_comensales) === TRUE && $conn->query($sql_servir) === TRUE) {
   echo "Dado de alta satisfactoriamente";
