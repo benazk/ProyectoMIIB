@@ -37,12 +37,12 @@ if ($conn->connect_error) {
 
 $sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMesa, idMenu)
 VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', $mesa, $menu);";
+$sql_servir = "INSERT INTO SeSirve (idMesa, idMenu) VALUES ($mesa, $menu);";
 
-
-if ($conn->query($sql_comensales) === TRUE) {
+if ($conn->query($sql_comensales) === TRUE && $conn->query($sql_servir) === TRUE) {
   echo "Dado de alta satisfactoriamente";
 } else {
-  echo "Error: " . $sql_comensales . "<br>" . $conn->error;
+  echo "Error: " . $sql_comensales . '' . $sql_servir . "<br>" . $conn->error;
 }
 
 // Cerrar conexión
