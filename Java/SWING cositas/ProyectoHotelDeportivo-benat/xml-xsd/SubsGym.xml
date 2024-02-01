@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Suscripcion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="SubsGym.xsd">
+    <Suscripcion>
+        <Nombre>Albion</Nombre>
+        <Apellido>Online</Apellido>
+        <Correo>adjkhajsd@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <Fecha>2024-02-18T11:30:00</Fecha>
+        <tipoSubs>Semanal</tipoSubs>
+    </Suscripcion>
+</Suscripcion>

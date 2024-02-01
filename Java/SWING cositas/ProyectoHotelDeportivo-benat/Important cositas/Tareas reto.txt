@@ -1,0 +1,15 @@
+Credenciales del Servidor de Nazaret: 
+IP: 192.168.1.223
+usuario: daw
+pass: daw23+
+
+id BBDD reto: dbrds
+usuario: admin
+contraseña: ASdiioqw--ad45
+servidor:
+puerto: 3306
+
+ServidorReto:
+user: ubuntu
+passwd: ubuntu
+puerto: 3306
