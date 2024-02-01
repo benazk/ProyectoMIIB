@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>restaurante</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function mostrarAgradecimiento() {
+        // Obtener los valores introducidos por el usuario
+        var nombre = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var fecha = document.getElementById('subject').value;
+
+        // Validar que todos los campos estén llenos antes de mostrar el agradecimiento
+        if (nombre && email && fecha) {
+          // Crear el mensaje de agradecimiento con los datos
+          var mensaje = '¡Gracias por tu reserva, ' + nombre + '!\n';
+          mensaje += 'Hemos registrado tu reserva con el email ' + email + ' para la fecha ' + fecha + '.';
+
+          // Mostrar el mensaje en una ventana de alerta
+          alert(mensaje);
+        } else {
+          // Si algún campo está vacío, mostrar un mensaje de error
+          alert('Por favor, completa todos los campos del formulario.');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>RESERVA RESTAURANTE</h1>
+    <div class="container">
+      <h2>¡Rellena el formulario!</h2> 
+      <form action="" class="form" onsubmit="mostrarAgradecimiento(); return false;">
+        
+        <input type="text" placeholder="Nombre" class="form__input" id="name" required />
+        <label for="name" class="form__label">Nombre</label>
+  
+        <input type="email" placeholder="Email" class="form__input" id="email" required />
+        <label for="email" class="form__label">Email</label>
+  
+        <input type="date" placeholder="Fecha" class="form__input" id="subject" required />
+        <label for="subject" class="form__label">Fecha</label>
+        
+        <input type="submit" value="Enviar" class="form__input" />
+    
+      </form>
+    </div>
+  </body>
+</html>
