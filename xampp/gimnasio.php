@@ -26,7 +26,7 @@ if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql_deportistas = "INSERT INTO Deportistas (NombreD, ApelidoD, Email, Telefono, fechaInicio, idSubs)
+$sql_deportistas = "INSERT INTO Deportistas (NombreD, ApellidoD, Email, Telefono, fechaInicio, idSubs)
 VALUES ($nombre, $apellidos, $email, $telefono, $fechahora, $suscripcion);";
 echo $sql_deportistas;
 $conn->query($sql_deportistas);
