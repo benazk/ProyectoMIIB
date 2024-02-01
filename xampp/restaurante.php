@@ -26,23 +26,23 @@ mesa: <?php echo $mesa; ?><br>
 $servidor = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
 $usuario = "admin";
 $password = "ASdiioqw--ad45";
-$basedatos = "BBDDProyectoGym1";
+$basedatos = "BBDDProyectoGym";
 
 // Crear conexión
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
-// Chequear conexión
+// Checkear conexión
 if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMesa, idMenu)
-VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', '$mesa', '$menu');";
-$sql_servir = "INSERT INTO SeSirve (idMesa, idMenu) VALUES ('$mesa', '$menu');";
+$sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMenu, idMesa)
+VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', 1, $mesa);";
 
-if ($conn->query($sql_comensales) === TRUE && $conn->query($sql_servir) === TRUE) {
+
+if ($conn->query($sql_comensales) === TRUE) {
   echo "Dado de alta satisfactoriamente";
 } else {
-  echo "Error: " . $sql_comensales . '' . $sql_servir . "<br>" . $conn->error;
+  echo "Error: " . $sql_comensales . "<br>" . $conn->error;
 }
 
 // Cerrar conexión
