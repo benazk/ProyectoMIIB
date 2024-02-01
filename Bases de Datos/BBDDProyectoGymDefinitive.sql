@@ -1,7 +1,7 @@
 DROP DATABASE BBDDProyectoGym1;
 CREATE DATABASE BBDDProyectoGym1;
 USE BBDDProyectoGym1;
-SELECT * FROM Menu;
+SELECT * FROM Deportistas;
 SET SQL_SAFE_UPDATES = 0;
 DELETE FROM ZonaRestauracion;
 UPDATE ZonaRestauracion SET MesaNum = "40A" WHERE idMesa = 40;
@@ -92,4 +92,15 @@ INSERT INTO Suscripcion (TipoSubs, PrecioSubs) VALUES ("Una Sesion", 20.0 ),
 ("Dos Meses", 220.00 ),
 ("Seis Meses", 600.00 ),
 ("Anual", 1000.00); 
-ALTER TABLE Deportistas ADD idZona;
+
+INSERT INTO ZonaDeporte (NumTarjeta, Zona) VALUES 
+(152364, 'Zona 1'),
+(256987, 'Zona 2'),
+(235657, 'Zona 3'),
+(897414, 'Zona 4'),
+(932541, 'Zona 5'),
+(852339, 'Zona 6'),
+(874535, 'Zona 7'),
+(489126, 'Zona 8'),
+(874235, 'Zona 9'),
+(459621, 'Zona 10');
