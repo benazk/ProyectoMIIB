@@ -172,11 +172,7 @@ body {}
 
 
 
-.inscripciones {
-  height: 120px;
-  width: 100%;
-  margin-top: 10px;
-}
+
 
 
 .menu {
@@ -192,31 +188,29 @@ body {}
 #overview {
   display: grid;
   grid-template-areas:
-    "a b c";
+    "a b";
   height: 700px;
   width: 88%;
   margin-left: 6%;
   margin-right: 6%;
   margin-bottom: 80px;
   
-  
-  
 }
-
-
-.info_overview {
-
+#overview1{
   margin: 40px;
+  margin-left: 14%;
+  width: 70%;
+}
+#overview2{
+  margin: 40px;
+  margin-left: 25%;
   width: 70%;
 
 }
 
-
 .info_overview h2 {
   text-align: center;
 }
-
-
 .info_overview img {
   height: 75%;
   width: 90%;

@@ -34,9 +34,6 @@ public class ConsultasRest extends JFrame  implements ActionListener, WindowList
 		btnRest.addActionListener(this);
 		
 		DefaultTableModel model = new DefaultTableModel();
-		model.setColumnIdentifiers();
-		//DefaultTableModel model = new DefaultTableModel(tm.getData1(), tm.getColumnNames()); 
-		//table = new JTable(model);
 	}
 	@Override
 	public void windowOpened(WindowEvent e) {
