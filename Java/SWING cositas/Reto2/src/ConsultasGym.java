@@ -1,10 +1,12 @@
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import java.awt.FlowLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -16,6 +18,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.EventListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 
@@ -24,6 +27,8 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	JButton btnGym;
 	JTextField txtNomFiltro;
 	JTable tblResultado;
+	JLabel lblImagen;
+	ImageIcon imgGatos;
 	static String Resultado[][];
 	String GymOptions[] = { "Elige lo que se va a mostrar", "Mostrar todos los Deportistas", "Filtrar por nombre",
 			"Mostrar todos los tier de Suscripcion", "Mostrar todas las zonas del gimnasio" };
@@ -32,7 +37,8 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	static Connection con;
 
 	ConsultasGym() {
-
+		imgGatos = new ImageIcon();
+		lblImagen = new JLabel(imgGatos);
 		cboQueMostrarGym = new JComboBox(GymOptions);
 		btnGym = new JButton("Mostrar");
 		txtNomFiltro = new JTextField();
@@ -202,7 +208,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 		ConsultasGym programa = new ConsultasGym();
 		Class.forName("com.mysql.cj.jdbc.Driver");
 
-		final String url = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
+		final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
 		final String user = "admin";
 		final String password = "ASdiioqw--ad45";
 
