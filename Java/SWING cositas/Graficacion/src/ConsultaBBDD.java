@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,24 +14,23 @@ import java.util.EventListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 
-public class ConsultasBBDD extends JFrame implements ActionListener, WindowListener, EventListener{
-	JComboBox cboEligeSector;
-	JButton btnSector;
-	ConsultasBBDD(){
-		
+public class ConsultaBBDD extends JFrame  implements ActionListener, WindowListener, EventListener{
+	JComboBox cboQueMostrarRest;
+	JButton btnRest;
+	ConsultaBBDD(){
 		setLayout(new FlowLayout());
 		setVisible(true); 
-		setSize(300, 100); 
+		setSize(500, 300); 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-		cboEligeSector = new JComboBox();
-		btnSector = new JButton();
+		cboQueMostrarRest = new JComboBox();
+		btnRest = new JButton();
 		
-		add(cboEligeSector);
-		add(btnSector);
+		add(cboQueMostrarRest);
+		add(btnRest);
 		
-		cboEligeSector.addActionListener(this);
-		btnSector.addActionListener(this);
+		cboQueMostrarRest.addActionListener(this);
+		btnRest.addActionListener(this);
 	}
 	@Override
 	public void windowOpened(WindowEvent e) {
@@ -81,7 +81,7 @@ public class ConsultasBBDD extends JFrame implements ActionListener, WindowListe
 	}
 
 	public static void main(String[] args) throws Exception {
-		ConsultasBBDD programa = new ConsultasBBDD();
+		ConsultaBBDD programa = new ConsultaBBDD();
 		// Conectar el Driver JDBC
 	      Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -89,7 +89,6 @@ public class ConsultasBBDD extends JFrame implements ActionListener, WindowListe
 	      final String url = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
 	      final String user = "admin";
 	      final String password = "ASdiioqw--ad45";
-
 	      // establecer la conexión
 	      Connection con = DriverManager.getConnection(url, user, password);
 
@@ -100,6 +99,14 @@ public class ConsultasBBDD extends JFrame implements ActionListener, WindowListe
 	      } else {
 	         System.out.println("¡Felicidades! Se ha establecido la conexión");
 	      } 
+	      Statement statement1 = con.createStatement();
+	      ResultSet resultSet1 = statement1.executeQuery("select * from Comensales");
+	      //Statement statement3 = con.createStatement();
+	      //ResultSet resultSet3 = statement3.executeQuery("select * from Comensales WHERE NombreC = " + NombreC);
+	      Statement statement5 = con.createStatement();
+	      ResultSet resultSet5 = statement5.executeQuery("select * from Menu");
+	      Statement statement7 = con.createStatement();
+	      ResultSet resultSet7 = statement7.executeQuery("select * from ZonaRestauracion");
 	      // Cerrar la conexión JDBC
 	      con.close();
 

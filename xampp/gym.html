@@ -8,7 +8,7 @@
     <h1>RESERVA GIMNASIO</h1>
     <div class="container">
       <h2>¡Rellena el formulario!</h2> 
-      <form action="" class="form">
+      <form action="gimnasio.php" class="form" method="get">
         
         <input type="text" placeholder="Nombre" class="form__input" id="name" name="nombre"/>
         <label for="name" class="form__label">Nombre</label>
@@ -22,25 +22,21 @@
         <input type="tel" placeholder="Telefono" class="form__input" id="Telefono" name="telefono" />
         <label for="tel" class="form__label">Telefono</label>
         
-        <select class="form__input" id="select">
-            <option value="">Elige tu suscripción</option>
-            <option value="">Una sesión(20€)</option>
-            <option value="">Dos sesiones</option>
-            <option value="">Semanal</option>
-            <option value="">Mensual</option>
-            <option value="">Dos meses</option>
-            <option value="">Seis meses</option>
-            <option value="">Anual</option>
+        <select class="form__input" id="select" name="suscripcion">
+            <option value="0">Elige tu suscripción</option>
+            <option value="1">Una sesión(20€)</option>
+            <option value="2">Dos sesiones</option>
+            <option value="3">Semanal</option>
+            <option value="4">Mensual</option>
+            <option value="5">Dos meses</option>
+            <option value="6">Seis meses</option>
+            <option value="7">Anual</option>
         </select>
   
-        <input type="date" placeholder="Extra" class="form__input" id="subject" />
+        <input type="datetime" placeholder="Extra" class="form__input" id="subject" name="fechaInicio"/>
         <label for="subject" class="form__label"></label>
         
         <input type="submit" placeholder="Extra" class="form__input" id="subject" />
-      </form>
-      <input type="hidden" placeholder="Reserva" class="form__input" id="reserva" />
-     
-
     </div>
   </body>
 </html>

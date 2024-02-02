@@ -9,6 +9,7 @@ body {}
   position: absolute;
   left: 50%;
   top: 0%;
+  z-index: 0;
 }
 
 .content h2 {
@@ -91,7 +92,7 @@ body {}
   height: 100%;
   width: 100%;
   z-index: 1;
-  margin: 0%;
+  top: 0;
 }
 
 .header {
@@ -113,7 +114,7 @@ body {}
 }
 
 .barra_lateral {
-  border: solid 2px magenta;
+  border: solid 2px rgb(175, 175, 175);
   display: none;
   position: fixed;
   top: 0;
@@ -171,11 +172,7 @@ body {}
 
 
 
-.inscripciones {
-  height: 120px;
-  width: 100%;
-  margin-top: 10px;
-}
+
 
 
 .menu {
@@ -191,31 +188,29 @@ body {}
 #overview {
   display: grid;
   grid-template-areas:
-    "a b c";
+    "a b";
   height: 700px;
   width: 88%;
   margin-left: 6%;
   margin-right: 6%;
-  margin-bottom: 80px;
-  
-  
+  margin-bottom: 30px;
   
 }
-
-
-.info_overview {
-
+#overview1{
   margin: 40px;
+  margin-left: 14%;
+  width: 70%;
+}
+#overview2{
+  margin: 40px;
+  margin-left: 25%;
   width: 70%;
 
 }
 
-
 .info_overview h2 {
   text-align: center;
 }
-
-
 .info_overview img {
   height: 75%;
   width: 90%;
@@ -284,6 +279,7 @@ body {}
   height: 30px;
   width: auto;
   border: none;
+  
 }
 
 #ocultarBarra img {
@@ -317,6 +313,7 @@ body {}
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+  scroll-behavior: smooth;
 
   a {
     text-decoration: none;
@@ -336,18 +333,13 @@ body {}
   width: 80%;
 }
 
-
-
-
 .container {
   position: relative;
   border: black solid 1px;
   width: 88%;
   left: 6%;
   right: 6%;
- 
 }
-
 
 .container img {
   max-width: 400px;
