@@ -114,7 +114,7 @@ body {}
 }
 
 .barra_lateral {
-  border: solid 2px magenta;
+  border: solid 2px rgb(175, 175, 175);
   display: none;
   position: fixed;
   top: 0;
@@ -313,6 +313,7 @@ body {}
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+  scroll-behavior: smooth;
 
   a {
     text-decoration: none;

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -9,10 +10,10 @@
     <h1>RESERVA RESTAURANTE</h1>
     <div class="container">
         <h2>¡Rellena el formulario!</h2>
-        <form action="restaurante.php" method="post" class="form">
+        <form action="restaurante.php" method="post" class="form" onsubmit="return validarFormulario();">
 
             <input type="text" placeholder="Nombre" class="form__input" id="nombre" name="nombre" />
-            <label for="name" class="form__label">Nombre</label>
+            <label for="nombre" class="form__label">Nombre</label>
 
             <input type="text" placeholder="Apellido" class="form__input" id="apellido" name="apellido" />
             <label for="apellido" class="form__label">Apellido</label>
@@ -20,8 +21,8 @@
             <input type="email" placeholder="Email" class="form__input" id="email" name="email" />
             <label for="email" class="form__label">Email</label>
 
-            <input type="tel" placeholder="Telefono" class="form__input" id="Telefono" name="telefono" />
-            <label for="tel" class="form__label">Telefono</label>
+            <input type="tel" placeholder="Telefono" class="form__input" id="telefono" name="telefono" />
+            <label for="telefono" class="form__label">Telefono</label>
 
             <select class="form__input" name="menu">
                 <option value="0" id="0">Elige comida</option>
@@ -36,13 +37,30 @@
             </select>
 
             <input type="datetime-local" placeholder="Extra" class="form__input" id="fecha" name="fecha" />
-            <label for="subject" class="form__label"></label>
+            <label for="fecha" class="form__label">Fecha</label>
             <input type="hidden" value="restaurante" name="restaurante" id="restaurante">
 
             <input type="submit" value="Enviar Reserva" class="form__input" id="subject" />
         </form>
-        <input type="hidden" placeholder="Reserva" class="form__input" id="reserva" />
     </div>
+
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var fecha = document.getElementById('fecha').value;
+
+            if (nombre && email && fecha) {
+                var mensaje = '¡Gracias por tu reserva, ' + nombre + '!\n';
+                mensaje += 'Hemos registrado tu reserva con el email ' + email + ' para la fecha ' + fecha + '.';
+                alert(mensaje);
+                return true; // Allow the form submission
+            } else {
+                alert('Por favor, completa todos los campos del formulario.');
+                return false; // Prevent the form submission
+            }
+        }
+    </script>
 </body>
 
 </html>

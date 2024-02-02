@@ -1,4 +1,8 @@
 <html>
+  <script> 
+    alert("Guardado"); 
+    window.location='Lista.php'; 
+  </script>
 <body>
 
 <?php

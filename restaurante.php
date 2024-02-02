@@ -1,4 +1,8 @@
 <html>
+  <script> 
+    alert("Guardado"); 
+    window.location='restaurante.php'; 
+  </script>
 <body>
 
 <?php
