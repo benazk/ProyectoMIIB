@@ -32,8 +32,8 @@ PuestoTrabajo VARCHAR(50),
 Salario DOUBLE,
 Telefono VARCHAR(16),
 Sector VARCHAR(40),
-idMesa INT,
-idZona INT,
+idMesa INT, (hay 40) 
+idZona INT, (hay 20)
 FOREIGN KEY(idMesa) REFERENCES ZonaRestauracion(idMesa),
 FOREIGN KEY(idZona) REFERENCES ZonaDeporte(idZona)
 );
