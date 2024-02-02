@@ -1,18 +1,18 @@
 Tematica Pagina Web (Restaurante/Gimnasio en un lugar paradisiaco)
-
+MARKEL
 Pagina Web HTML, CSS, JS
-
+IVAN
 Formularios de reserva a restaurante y gimnasio
-
+IMANOL
 XML,XSD: Jerarquizacion del guardado de datos
-
+BEÑAT
 PHP, Inserciones a la Base de Datos
-
+BEÑAT
 JAVA, Consultas a base de datos (SWING)
-
+BEÑAT
 Base de datos 
 
 Servidor AWS(Base de datos) y Servidor de Nazaret (Servidor Web)
 
 Entornos de desarrollo usados: VS Codium, Eclipse IDE, MySql Workbench
-
+IVAN
