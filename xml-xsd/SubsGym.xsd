@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" xml:long="es">
-    <xs:element name="Subscripcion">
+    <xs:element name="Suscripcion">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="tipoSubs">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="Una Sesion" />
-                            <xs:enumeration value="Dos Sesiones" />
-                            <xs:enumeration value="Semanal" />
-                            <xs:enumeration value="Mensual" />
-                            <xs:enumeration value="2 Meses" />
-                            <xs:enumeration value="6 Meses" />
-                            <xs:enumeration value="Anual" />
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="Fecha" type="xs:dateTime" />
-                <xs:element name="Nombre">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:pattern value="[A-Z]{1}[a-z]*"></xs:pattern>
-
-                        </xs:restriction>
-                    </xs:simpleType>
+                <xs:element name="Suscripcion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z]{1}[a-z]*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Apellido">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z]{1}[a-z]*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Correo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern
+                                            value="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Telefono">
+                                <xs:simpleType>
+                                <xs:restriction base="xs:string">   
+                                        <xs:pattern value="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Fecha" type="xs:dateTime" />
+                            <xs:element name="tipoSubs">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Una Sesion" />
+                                        <xs:enumeration value="Dos Sesiones" />
+                                        <xs:enumeration value="Semanal" />
+                                        <xs:enumeration value="Dos Semanas" />
+                                        <xs:enumeration value="Mensual" />
+                                        <xs:enumeration value="Dos meses" />
+                                        <xs:enumeration value="Seis Meses" />
+                                        <xs:enumeration value="Anual" />                                        
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>

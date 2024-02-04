@@ -1,159 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOLA</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <div class="header">
+        <section>
+            <div class="content">
+                <h2>MIIB</h2>
+                <h2>MIIB</h2>
+            </div>
+        </section>
+        <button class="menu_button"><img src="imagenes/menu.png" alt="" onclick="mostrarBarra()"></button>
+    </div>
 </head>
 
+
 <body>
-    <div class="header">
-        <h1 id="titulo"></h1>
-        <img class="logo" src="/imagenes/.png" alt="">
+    <div id="gris"></div>
 
-        <div class="buscador-form">
-            <input class="buscador-form_txt" type="text" placeholder="Busca..." name="" id="">
-            <button class="buscador-form_btn"><img class="buscador-form_img" style="height: 13px; width: 100%;"
-                    src="imagenes/buscador.png" alt="image"></button>
-        </div>
-
-        <img class="menu" src="/imagenes/hamburguesa.png" alt="">
-
+    <div class="barra_lateral">
+        <button id="ocultarBarra" class="header__link"> <img src="imagenes/exit.png" onclick="ocultarBarra()"></button>
+        <h3><a href="rest.html" class="header__link">Restaurante</a></h3>
+        <h3><a href="rest.html" class="header__link">Gimnasio</a></h3>
+        <h3><a href="rest.html" class="header__link">Contacto</a></h3>
+        <h3><a href="rest.html" class="header__link">Mapa</a></h3>
+        <label for="inscripcion_menu">Inscribete! </label>
+        <h3><a href="xampp/rest.html" class="header__link">Restaurante</a></h3>
+        <h3><a href="xampp/gym.html" class="header__link">Gimnasio</a></h3>
     </div>
     <div class="overview_image">
-        <img src="/imagenes/placeholder.png" alt="">
+        <img src="/imagenes/hotel.jpg" id="foto1" alt="">
+        <img src="/imagenes/mujer_playa.jpg" id="foto2" alt="">
     </div>
     <div class="inscripciones">
-        <h2 style="text-align: center;">Elige evento</h2>
+        <h2 style="text-align: center;">¡Regístrate ya!</h2>
         <div class="menu">
-            <div class="hotel"><a href="hotel.html">
-                    <h3>Hotel</h3>
-                </a></div>
-            <div class="restaurante"><a href="index.html">
-                    <h3>Restaurante</h3>
-                </a></div>
-            <div class="gimnasio"><a href="index.html">
-                    <h3>Gimnasio</h3>
-                </a></div>
+            <button class="bottonInicio" role="button"><a href="xampp/rest.html">
+                    <h3 class="header__link">Restaurante</h3>
+                </a></button>
+            <button class="bottonInicio"><a href="xampp/gym.html">
+                    <h3 class="header__link">Gimnasio</h3>
+                </a></button>
         </div>
         <form action="insert.php"></form>
     </div>
     <div id="informacion">
         <div id="overview">
-            <div class="info_overview">
-                <h2>HOTEL</h2>
-                <img src="imagenes/placeholder.png" alt="">
-                <button class="leer_mas"><a href="#hotel">Leer Mas</a></button>
-            </div>
-            <div class="info_overview">
+            <div class="info_overview" id="overview1">
                 <h2>RESTAURANTE</h2>
-                <img src="imagenes/placeholder.png" alt="">
-                <button class="leer_mas"><a href="#restaurante">Leer Mas</a></button>
+                <img src="imagenes/rest.jpg" alt="">
+                <button class="leer_mas "><a href="#restaurante" class="header__link">Leer Mas</a></button>
             </div>
-            <div class="info_overview">
-                <h2>GYM</h2>
-                <img src="imagenes/placeholder.png" alt="">
-                <button class="leer_mas"><a href="#gym">Leer Mas</a></button>
+            <div class="info_overview" id="overview2">
+                <h2>GIMNASIO</h2>
+                <img src="imagenes/gym.png" alt="">
+                <button class="leer_mas"><a href="#gym" class="header__link">Leer Mas</a></button>
             </div>
         </div>
+        <div class="galeria">
+            <button id="exit_galeria" onclick="ocultarGaleria()" class="header__link"><img src="imagenes/exit.png"
+                    alt=""></button>
+        </div>
+        <button class="Galeria_button" id="mostrarGaleria" onclick="mostrarGaleria()">
+            <h2 class="header__link">GALERIA DE IMAGENES</h2>
+        </button>
         <div class="info">
-            <div class="container" id="hotel">
-                <img src="imagenes/placeholder.png" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Fringilla ut
-                    morbi tincidunt augue interdum velit euismod in pellentesque. Convallis a cras semper auctor neque
-                    vitae tempus quam. Pellentesque habitant morbi tristique senectus et netus et. Lectus urna duis
-                    convallis convallis tellus id interdum. Blandit aliquam etiam erat velit scelerisque in dictum.
-                    Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Felis bibendum ut tristique
-                    et egestas quis ipsum. Vulputate mi sit amet mauris commodo quis imperdiet massa. Enim nulla aliquet
-                    porttitor lacus. Eu turpis egestas pretium aenean pharetra magna. Augue ut lectus arcu bibendum at
-                    varius vel pharetra. Aenean pharetra magna ac placerat vestibulum lectus mauris. Faucibus turpis in
-                    eu mi bibendum. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Ullamcorper a
-                    lacus vestibulum sed arcu non. Ac tortor dignissim convallis aenean et. Id semper risus in hendrerit
-                    gravida rutrum quisque.
-
-                    Ut aliquam purus sit amet luctus. Enim sit amet venenatis urna cursus eget nunc. Cras ornare arcu
-                    dui vivamus arcu. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Diam maecenas
-                    ultricies mi eget. Lacus sed turpis tincidunt id aliquet risus. Id donec ultrices tincidunt arcu non
-                    sodales. Sed elementum tempus egestas sed sed risus pretium. Maecenas ultricies mi eget mauris
-                    pharetra et ultrices neque. Congue quisque egestas diam in arcu cursus. Ut pharetra sit amet aliquam
-                    id diam maecenas ultricies mi. Felis eget velit aliquet sagittis id consectetur purus ut. Nec dui
-                    nunc mattis enim ut tellus elementum sagittis. Senectus et netus et malesuada fames ac turpis
-                    egestas integer. Arcu dui vivamus arcu felis bibendum. Aliquet bibendum enim facilisis gravida
-                    neque. Arcu dui vivamus arcu felis bibendum ut tristique et. Malesuada proin libero nunc consequat
-                    interdum varius sit. Lacus vestibulum sed arcu non odio euismod lacinia. Ullamcorper malesuada proin
-                    libero nunc consequat interdum.</p>
-                <img src="imagenes/placeholder.png" alt="">
-            </div>
             <div class="container" id="restaurante">
-                <img src="imagenes/placeholder.png" alt="">
+                <h2 style="text-align: center;">Sobre nuestra peninsula</h2><br>
+                <img src="imagenes/borabora.jpg" id="" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Fringilla ut
+                    morbi tincidunt augue interdum velit euismod in pellentesque. Convallis a cras semper auctor neque
+                    vitae tempus quam. Pellentesque habitant morbi tristique senectus et netus et. Lectus urna duis
+                    convallisurus sit amet volutpat consequat. Ullamcorper a
+                    lacus vestibulum sed arcu non. Ac tortor dignissim convallis aenean et. Id semper risus in hendrerit
+                    gravida rutrum quisque.</p>
+
+                <img src="imagenes/boraSunset.jpg" id="" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Fringilla ut
                     morbi tincidunt augue interdum velit euismod in pellentesque. Convallis a cras semper auctor neque
                     vitae tempus quam. Pellentesque habitant morbi tristique senectus et netus et. Lectus urna duis
                     convallis convallis tellus id interdum. Blandit aliquam etiam erat velit scelerisque in dictum.
-                    Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Felis bibendum ut tristique
-                    et egestas quis ipsum. Vulputate mi sit amet mauris commodo quis imperdiet massa. Enim nulla aliquet
-                    porttitor lacus. Eu turpis egestas pretium aenean pharetra magna. Augue ut lectus arcu bibendum at
+                    Lobortis scelerisque fetium aenean pharetra magna. Augue ut lectus arcu bibendum at
                     varius vel pharetra. Aenean pharetra magna ac placerat vestibulum lectus mauris. Faucibus turpis in
                     eu mi bibendum. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Ullamcorper a
                     lacus vestibulum sed arcu non. Ac tortor dignissim convallis aenean et. Id semper risus in hendrerit
-                    gravida rutrum quisque.
-
-                    Ut aliquam purus sit amet luctus. Enim sit amet venenatis urna cursus eget nunc. Cras ornare arcu
-                    dui vivamus arcu. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Diam maecenas
-                    ultricies mi eget. Lacus sed turpis tincidunt id aliquet risus. Id donec ultrices tincidunt arcu non
-                    sodales. Sed elementum tempus egestas sed sed risus pretium. Maecenas ultricies mi eget mauris
-                    pharetra et ultrices neque. Congue quisque egestas diam in arcu cursus. Ut pharetra sit amet aliquam
-                    id diam maecenas ultricies mi. Felis eget velit aliquet sagittis id consectetur purus ut. Nec dui
-                    nunc mattis enim ut tellus elementum sagittis. Senectus et netus et malesuada fames ac turpis
-                    egestas integer. Arcu dui vivamus arcu felis bibendum. Aliquet bibendum enim facilisis gravida
-                    neque. Arcu dui vivamus arcu felis bibendum ut tristique et. Malesuada proin libero nunc consequat
-                    interdum varius sit. Lacus vestibulum sed arcu non odio euismod lacinia. Ullamcorper malesuada proin
-                    libero nunc consequat interdum.</p>
-                <img src="imagenes/placeholder.png" alt="">
+                    gravida rutrum quisque.</p>
             </div>
             <div class="container" id="gym">
-                <img src="imagenes/placeholder.png" alt="">
+                <h2 style="text-align: center;">Sobre Gym</h2><br>
+                <img src="imagenes/borabora.jpg" id="" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Fringilla ut
+                    morbi tincidunt augue interdum velit euismod in pellentesque. Convallis a cras semper auctor neque
+                    vitae tempus quam. Pellentesque habitant morbi tristique senectus et netus et. Lectus urna duis
+                    convallisurus sit amet volutpat consequat. Ullamcorper a
+                    lacus vestibulum sed arcu non. Ac tortor dignissim convallis aenean et. Id semper risus in hendrerit
+                    gravida rutrum quisque.</p>
+
+                <img src="imagenes/boraSunset.jpg" id="" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Fringilla ut
                     morbi tincidunt augue interdum velit euismod in pellentesque. Convallis a cras semper auctor neque
                     vitae tempus quam. Pellentesque habitant morbi tristique senectus et netus et. Lectus urna duis
                     convallis convallis tellus id interdum. Blandit aliquam etiam erat velit scelerisque in dictum.
-                    Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Felis bibendum ut tristique
-                    et egestas quis ipsum. Vulputate mi sit amet mauris commodo quis imperdiet massa. Enim nulla aliquet
-                    porttitor lacus. Eu turpis egestas pretium aenean pharetra magna. Augue ut lectus arcu bibendum at
+                    Lobortis scelerisque fetium aenean pharetra magna. Augue ut lectus arcu bibendum at
                     varius vel pharetra. Aenean pharetra magna ac placerat vestibulum lectus mauris. Faucibus turpis in
                     eu mi bibendum. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Ullamcorper a
                     lacus vestibulum sed arcu non. Ac tortor dignissim convallis aenean et. Id semper risus in hendrerit
-                    gravida rutrum quisque.
-
-                    Ut aliquam purus sit amet luctus. Enim sit amet venenatis urna cursus eget nunc. Cras ornare arcu
-                    dui vivamus arcu. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Diam maecenas
-                    ultricies mi eget. Lacus sed turpis tincidunt id aliquet risus. Id donec ultrices tincidunt arcu non
-                    sodales. Sed elementum tempus egestas sed sed risus pretium. Maecenas ultricies mi eget mauris
-                    pharetra et ultrices neque. Congue quisque egestas diam in arcu cursus. Ut pharetra sit amet aliquam
-                    id diam maecenas ultricies mi. Felis eget velit aliquet sagittis id consectetur purus ut. Nec dui
-                    nunc mattis enim ut tellus elementum sagittis. Senectus et netus et malesuada fames ac turpis
-                    egestas integer. Arcu dui vivamus arcu felis bibendum. Aliquet bibendum enim facilisis gravida
-                    neque. Arcu dui vivamus arcu felis bibendum ut tristique et. Malesuada proin libero nunc consequat
-                    interdum varius sit. Lacus vestibulum sed arcu non odio euismod lacinia. Ullamcorper malesuada proin
-                    libero nunc consequat interdum.</p>
-                <img src="imagenes/placeholder.png" alt="">
+                    gravida rutrum quisque.</p>
             </div>
-        </div>
-        <div class="mas_info">
-            <div id="mapa">mapa<iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95493.67235706821!2d-151.89602256488544!3d-16.4692695155084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bdbd073751b789%3A0x1009eed17724e9bd!2sFaanui%2C%20Bora-Bora%2C%20Polinesia%20Francesa!5e1!3m2!1ses!2ses!4v1706097804821!5m2!1ses!2ses"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-            <div id="contacto">contacto</div>
-        </div>
-    </div>
 
+
+        </div>
+
+    </div>
+    <div class="mapa">
+        <h1 style="text-align: center; margin-bottom: 20px;">Mapa</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95493.67235706821!2d-151.89602256488544!3d-16.4692695155084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bdbd073751b789%3A0x1009eed17724e9bd!2sFaanui%2C%20Bora-Bora%2C%20Polinesia%20Francesa!5e1!3m2!1ses!2ses!4v1706097804821!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menuFoot">
+          <li class="menuFoot__item"><a class="menuFoot__link" href="#">Home</a></li>
+          <li class="menuFoot__item"><a class="menuFoot__link" href="#">About</a></li>
+          <li class="menuFoot__item"><a class="menuFoot__link" href="#">Services</a></li>
+          <li class="menuFoot__item"><a class="menuFoot__link" href="#">Team</a></li>
+          <li class="menuFoot__item"><a class="menuFoot__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;Chipi Chipi Chapa Chapa Dubi Dubi Daba Daba</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 
 </html>
