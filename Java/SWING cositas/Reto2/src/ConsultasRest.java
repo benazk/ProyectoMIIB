@@ -52,7 +52,9 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/MIIB.jpg");
 		setIconImage(imgIcon);
 		setTitle("Consultas al Restaurante");
-		
+		Container c = getContentPane();
+
+		c.setBackground(new java.awt.Color(120, 200, 200));
 
 		cboQueMostrarRest = new JComboBox(RestOptions);
 		btnRest = new JButton("Mostrar Tabla");
@@ -93,9 +95,10 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 		
 		
 		setVisible(true);
-		setSize(800, 400);
+		setSize(800, 600);
 		setLayout(null);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setResizable(false);
 	}
 
 	@Override

@@ -1,5 +1,10 @@
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -10,28 +15,52 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.EventListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 
 public class ConsultasBBDD extends JFrame implements ActionListener, WindowListener, EventListener{
 	JComboBox cboEligeSector;
 	JButton btnSector;
-	String sector[] = {"","Restauracion","Gimnasio"};
+	String sector[] = {" Elige el Sector"," Restauracion"," Gimnasio"};
+	ImageIcon imgLogo;
+	JLabel lblImagen;
 	ConsultasBBDD(){
 		
-		setLayout(new FlowLayout());
-		setVisible(true); 
-		setSize(500, 300); 
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/lobotomy.jpg");
+		imgLogo = new ImageIcon("/imagenes/Gimnasio1.jpg");
+		setIconImage(imgIcon);
+		lblImagen = new JLabel(imgLogo);
+		setTitle("Consultas a la Base de Datos");
 		
 		cboEligeSector = new JComboBox(sector);
 		btnSector = new JButton("Elegir!");
 		
+		lblImagen.setSize(300, 300);
+		lblImagen.setLocation(100, 100);
+		
+		cboEligeSector.setSize(150, 35);
+		cboEligeSector.setLocation(120, 50);
+		cboEligeSector.setBackground(new Color(8, 170, 170));
+		cboEligeSector.setBorder(null);
+		
+		btnSector.setSize(80, 35);
+		btnSector.setLocation(290, 50);
+		btnSector.setBackground(new Color(8, 170, 170));
+		btnSector.setBorder(null);
+		
+		add(lblImagen);
 		add(cboEligeSector);
 		add(btnSector);
 		
 		cboEligeSector.addActionListener(this);
 		btnSector.addActionListener(this);
+		
+		setLayout(null);
+		setVisible(true); 
+		setSize(500, 300); 
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
 	}
 	@Override
 	public void windowOpened(WindowEvent e) {
@@ -79,11 +108,14 @@ public class ConsultasBBDD extends JFrame implements ActionListener, WindowListe
 	public void actionPerformed(ActionEvent e) {
 		var sector = cboEligeSector.getSelectedItem();
 		if (e.getSource() == btnSector) {
-			if(sector == "Restauracion") {
+			if(sector.equals(" Restauracion")) {
 				new ConsultasRest();
 			}
-			else {
+			else if(sector.equals(" Gimnasio")) {
 				new ConsultasGym();
+			}
+			else if(sector.equals(" Elige el Sector")) {
+				assert true;
 			}
 		}
 	}
