@@ -3,18 +3,20 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
 import java.awt.Color;
 import java.awt.Container;
-
+import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.awt.geom.RoundRectangle2D;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -26,8 +28,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 
-
-@SuppressWarnings("serial")
 public class ConsultasGym extends JFrame implements ActionListener, WindowListener, EventListener {
 	JComboBox cboQueMostrarGym;
 	JButton btnGym;
@@ -149,7 +149,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 		
 		try {
 			
-			if ("Mostrar todos los Deportistas".equals(item)) {
+			if ("   Mostrar todos los Deportistas".equals(item)) {
 				System.out.println(1);					
 				
 				model.setColumnIdentifiers(GymColumns);
@@ -172,11 +172,10 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 					FechaInicio = dep.getString(6);
 					idSubs = dep.getInt(7);
 					model.addRow(new Object[] { id, nombreD, apellidoD, email, telefono, FechaInicio, idSubs });
-					
 				}
 				
 				
-			} else if ("Filtrar por nombre".equals(item)) {
+			} else if ("   Filtrar por nombre".equals(item)) {
 				txtFiltro.setVisible(true);
 				btnGym.setVisible(true);
 				if (e.getSource() == btnGym) {
@@ -205,7 +204,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 						model.addRow(new Object[] { id, nombreD, apellidoD, email, telefono, FechaInicio, idSubs });
 					}
 				}
-			} else if ("Mostrar todas las suscripciones".equals(item)) {
+			} else if ("   Mostrar todas las suscripciones".equals(item)) {
 
 				model.setColumnIdentifiers(SusColumns);
 				
@@ -222,7 +221,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 					model.addRow(new Object[] { idSubs, PrecioSubs, TipoSubs });
 				}
 
-			} else if ("Mostrar todas las zonas".equals(item)) {
+			} else if ("   Mostrar todas las zonas".equals(item)) {
 
 				model.setColumnIdentifiers(ZonaColumns);
 				 if (con == null) {
@@ -260,7 +259,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	}
 
 	public static void main(String[] args) throws Exception {
-	   new ConsultasGym();
+	    ConsultasGym consultasGym = new ConsultasGym();
 
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
