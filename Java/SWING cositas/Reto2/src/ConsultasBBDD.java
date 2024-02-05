@@ -109,7 +109,7 @@ public class ConsultasBBDD extends JFrame implements ActionListener, WindowListe
 		var sector = cboEligeSector.getSelectedItem();
 		if (e.getSource() == btnSector) {
 			if(sector.equals(" Restauracion")) {
-				new ConsultasRest();
+		//		new ConsultasRest();
 			}
 			else if(sector.equals(" Gimnasio")) {
 				new ConsultasGym();

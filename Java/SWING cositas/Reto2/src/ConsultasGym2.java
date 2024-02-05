@@ -28,8 +28,8 @@ import javax.swing.JComboBox;
 
 
 @SuppressWarnings("serial")
-public class ConsultasGym extends JFrame implements ActionListener, WindowListener, EventListener {
-	JComboBox cboQueMostrarGym;
+public class ConsultasGym2 extends JFrame implements ActionListener, WindowListener, EventListener {
+	//JComboBox cboQueMostrarGym;
 	JButton btnGym;
 	JTextField txtFiltro;
 	JTable tblResultado;
@@ -44,43 +44,47 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	static DefaultTableModel model = new DefaultTableModel();
 	static Connection con;
 
-	ConsultasGym() {
-		imgLogo = new ImageIcon("C:\\gatucos.png");
-		lblImagen = new JLabel(imgLogo);
-		Color cbo = new Color(8, 170, 170);
-		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/MIIB.jpg");
-		setIconImage(imgIcon);
+	ConsultasGym2() {
+		
+		//imgLogo = new ImageIcon("E:\\gatucos.png");
+		//lblImagen = new JLabel(imgLogo);
+		//Color cbo = new Color(8, 170, 170);
+		//Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/MIIB.jpg");
+		//setIconImage(imgIcon);
+		
 		setTitle("Consultas al Gimnasio");
-		Container c = getContentPane();
+		//Container c = getContentPane();
 
-		c.setBackground(new java.awt.Color(120, 200, 200));
+		//c.setBackground(new java.awt.Color(120, 200, 200));
 
-		cboQueMostrarGym = new JComboBox(GymOptions);
+		//cboQueMostrarGym = new JComboBox(GymOptions);
 		btnGym = new JButton("Mostrar Tabla");
 		txtFiltro = new JTextField();
 		btnFiltro = new JButton("Filtrar Tabla");
 
 		txtFiltro.setColumns(8);
-		cboQueMostrarGym.setSize(210, 40);
-		cboQueMostrarGym.setLocation(255, 50);
-		cboQueMostrarGym.setBackground(cbo);
-		cboQueMostrarGym.setBorder(null);
+		//cboQueMostrarGym.setSize(210, 40);
+		//cboQueMostrarGym.setLocation(255, 50);
+		//cboQueMostrarGym.setBackground(cbo);
+		//cboQueMostrarGym.setBorder(null);
 		btnGym.setSize(100, 40);
 		btnGym.setLocation(420, 100);
 		btnGym.setBackground(new Color(120, 190, 190));
 		btnGym.setBorder(null);
 		txtFiltro.setSize(210, 40);
 		txtFiltro.setLocation(200, 100);
-		lblImagen.setSize(80, 80);
-		lblImagen.setLocation(500, 100);
-		add(cboQueMostrarGym);
+		//lblImagen.setSize(80, 80);
+		//lblImagen.setLocation(500, 100);
+		//add(cboQueMostrarGym);
 		add(btnGym);
 		add(txtFiltro);
-		add(lblImagen);
-
-		btnGym.setVisible(false);
-		txtFiltro.setVisible(false);
-		cboQueMostrarGym.addActionListener(this);
+		//add(lblImagen);
+		
+		
+		
+		btnGym.setVisible(true);
+		txtFiltro.setVisible(true);
+		//cboQueMostrarGym.addActionListener(this);
 		btnGym.addActionListener(this);
 		txtFiltro.addActionListener(this);
 
@@ -144,7 +148,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String item = (String) cboQueMostrarGym.getSelectedItem();
+	/*	String item = (String) cboQueMostrarGym.getSelectedItem();
 		System.out.println(item);
 		
 		try {
@@ -256,12 +260,12 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	            ex.printStackTrace();
 	        }
 	    }
-
+*/
 	}
 
 	public static void main(String[] args) throws Exception {
-	   new ConsultasGym();
-
+	   new ConsultasGym2();
+/*
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
 	        final String user = "admin";
@@ -275,6 +279,6 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	            System.out.println("¡Felicidades! Se ha establecido la conexión");
 	            return;
 	        }
-
+*/
 	    } 
 	}

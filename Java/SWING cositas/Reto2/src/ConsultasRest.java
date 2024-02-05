@@ -46,16 +46,16 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 	static Connection con;
 
 	ConsultasRest() {
-		imgLogo = new ImageIcon("E:\\gatucos.png");
-		lblImagen = new JLabel(imgLogo);
-		Color cbo = new Color(8, 170, 170);
+		
 		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/MIIB.jpg");
 		setIconImage(imgIcon);
 		setTitle("Consultas al Restaurante");
 		Container c = getContentPane();
 
 		c.setBackground(new java.awt.Color(120, 200, 200));
-
+		imgLogo = new ImageIcon("E:\\gatucos.png");
+		lblImagen = new JLabel(imgLogo);
+		Color cbo = new Color(8, 170, 170);
 		cboQueMostrarRest = new JComboBox(RestOptions);
 		btnRest = new JButton("Mostrar Tabla");
 		txtFiltro = new JTextField();
@@ -74,6 +74,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 		txtFiltro.setLocation(200, 100);
 		lblImagen.setSize(80, 80);
 		lblImagen.setLocation(500, 100);
+		
 		add(cboQueMostrarRest);
 		add(btnRest);
 		add(txtFiltro);
@@ -86,13 +87,14 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 		txtFiltro.addActionListener(this);
 
 		
-		tblResultado = new JTable(model);
+		tblResultado = new JTable();
 		tblResultado.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-		tblResultado.setFillsViewportHeight(true);
 		JScrollPane scroll = new JScrollPane(tblResultado);
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-		
+		tblResultado.setSize(700, 400);
+		tblResultado.setLocation(50, 200);
+		add(tblResultado);
 		
 		setVisible(true);
 		setSize(800, 600);
@@ -150,7 +152,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 		
 		try {
 			
-			if ("Mostrar todos los Comensales".equals(item)) {
+			if ("   Mostrar todos los Comensales".equals(item)) {
 				System.out.println(1);					
 				int id = 0;
 				String nombreC = "";
@@ -164,7 +166,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 				model.setColumnIdentifiers(RestColumns);
 				Statement comState = con.createStatement();
 				ResultSet com = comState.executeQuery("SELECT * FROM Comensales");
-				if (com.next()) {
+				while (com.next()) {
 					
 					id = com.getInt(1);
 					nombreC = com.getString(2);
@@ -179,7 +181,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 				}
 				
 				
-			} else if ("Filtrar por nombre".equals(item)) {
+			} else if ("   Filtrar por nombre".equals(item)) {
 				txtFiltro.setVisible(true);
 				btnRest.setVisible(true);
 				if (e.getSource() == btnRest) {
@@ -211,7 +213,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 								new Object[] { id, nombreC, apellidoC, email, telefono, DiaYHora, idMesa, idMenu });
 					}
 				}
-			} else if ("Mostrar todas las mesas".equals(item)) {
+			} else if ("   Mostrar todas las mesas".equals(item)) {
 
 				model.setColumnIdentifiers(MesaColumns);
 				
@@ -226,7 +228,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 					model.addRow(new Object[] { idMesa, MesaNum });
 				}
 
-			} else if ("Mostrar todos los menus".equals(item)) {
+			} else if ("   Mostrar todos los menus".equals(item)) {
 
 				model.setColumnIdentifiers(MenuColumns);
 				 if (con == null) {
@@ -264,7 +266,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 	}
 
 	public static void main(String[] args) throws Exception {
-	    ConsultasRest consultasRest = new ConsultasRest();
+	    	new ConsultasRest();
 
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
