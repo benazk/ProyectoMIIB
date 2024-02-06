@@ -3,6 +3,7 @@
 <body>
 
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
     $puesto = $_POST["puesto"];
     $salario = $_POST["salario"];
@@ -38,6 +39,7 @@
 
     // Cerrar conexión
     $conn->close();
+}
 ?>
 
 </body>

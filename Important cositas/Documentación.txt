@@ -6,6 +6,8 @@ Formularios de reserva a restaurante y gimnasio
 IMANOL
 XML,XSD: Jerarquizacion del guardado de datos
 BEÑAT
+Hemos hecho un esquema de guardado de datos con respecto a las tablas "Deportistas" y "Comensales" en las cuales hemos puesto patrones y restricciones para que el guardado de datos sea correcto y fiel a las tablas 
+
 PHP, Inserciones a la Base de Datos
 BEÑAT
 JAVA, Consultas a base de datos (SWING)
