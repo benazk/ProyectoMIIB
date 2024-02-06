@@ -43,15 +43,13 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 	String MesaColumns[] = { "idMesa", "idMenu" };
 	String MenuColumns[] = { "idMenu", "ObjetoMenu", "Precio" };
 	static DefaultTableModel model = new DefaultTableModel();
-	static Connection con;
-
+	static Connection conRest;
 	ConsultasRest() {
-		imgLogo = new ImageIcon("E:\\gatucos.png");
-		lblImagen = new JLabel(imgLogo);
+		
 		Color cbo = new Color(8, 170, 170);
 		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/MIIB.jpg");
 		setIconImage(imgIcon);
-		setTitle("Consultas al Restaurante");
+		setTitle("qConsultas al Restaurante");
 		Container c = getContentPane();
 
 		c.setBackground(new java.awt.Color(120, 200, 200));
@@ -89,10 +87,19 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 		tblResultado = new JTable(model);
 		tblResultado.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 		tblResultado.setFillsViewportHeight(true);
+		
+		model = new DefaultTableModel(); 
+		tblResultado.setModel(model); 
+		
 		JScrollPane scroll = new JScrollPane(tblResultado);
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-		
+		scroll.setSize(700, 400); 
+		scroll.setLocation(50, 150);
+		add(scroll);
+		tblResultado.setSize(800,400);
+		tblResultado.setLocation(50, 150);
+		add(tblResultado);	
 		
 		setVisible(true);
 		setSize(800, 600);
@@ -145,12 +152,25 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String item = (String) cboQueMostrarRest.getSelectedItem();
-		System.out.println(item);
 		
 		try {
-			
-			if ("Mostrar todos los Comensales".equals(item)) {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
+			final String user = "admin";
+			final String password = "ASdiioqw--ad45";
+			conRest = DriverManager.getConnection(url, user, password);
+
+			if (conRest == null) {
+			    System.out.println("No se ha establecido la conexión");
+			    return;
+			} else {
+			    System.out.println("¡Felicidades! Se ha establecido la conexión");
+			    return;
+			}
+			if (e.getSource() == cboQueMostrarRest) {
+                String item = (String) cboQueMostrarRest.getSelectedItem();
+
+			if ("   Mostrar todos los Comensales".equals(item)) {
 				System.out.println(1);					
 				int id = 0;
 				String nombreC = "";
@@ -162,7 +182,7 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 				int idMenu = 0;
 				System.out.println(1);
 				model.setColumnIdentifiers(RestColumns);
-				Statement comState = con.createStatement();
+				Statement comState = conRest.createStatement();
 				ResultSet com = comState.executeQuery("SELECT * FROM Comensales");
 				if (com.next()) {
 					
@@ -179,14 +199,14 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 				}
 				
 				
-			} else if ("Filtrar por nombre".equals(item)) {
+			} else if ("   Filtrar por nombre".equals(item)) {
 				txtFiltro.setVisible(true);
 				btnRest.setVisible(true);
 				if (e.getSource() == btnRest) {
 
 					String NombreC = txtFiltro.getText();
 					model.setColumnIdentifiers(RestColumns);
-					Statement comnState = con.createStatement();
+					Statement comnState = conRest.createStatement();
 					ResultSet comn = comnState
 							.executeQuery("select * from Comensales WHERE NombreC = " + "'" + NombreC + "'");
 
@@ -211,11 +231,11 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 								new Object[] { id, nombreC, apellidoC, email, telefono, DiaYHora, idMesa, idMenu });
 					}
 				}
-			} else if ("Mostrar todas las mesas".equals(item)) {
+			} else if ("   Mostrar todas las mesas".equals(item)) {
 
 				model.setColumnIdentifiers(MesaColumns);
 				
-				Statement mesaState = con.createStatement();
+				Statement mesaState = conRest.createStatement();
 				ResultSet mesa = mesaState.executeQuery("select * from ZonaRestauracion");
 
 				while (mesa.next()) {
@@ -226,13 +246,10 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 					model.addRow(new Object[] { idMesa, MesaNum });
 				}
 
-			} else if ("Mostrar todos los menus".equals(item)) {
+			} else if ("   Mostrar todos los menus".equals(item)) {
 
 				model.setColumnIdentifiers(MenuColumns);
-				 if (con == null) {
-			            System.out.println("No se ha establecido la conexión");
-				 }
-				Statement menuState = con.createStatement();
+				Statement menuState = conRest.createStatement();
 				ResultSet menu = menuState.executeQuery("select * from Menu");
 
 				while (menu.next()) {
@@ -245,40 +262,20 @@ public class ConsultasRest extends JFrame implements ActionListener, WindowListe
 					model.addRow(new Object[] { idMenu, ObjetoMenu, Precio });
 				}
 
-			}
+			
 			tblResultado.setVisible(true);
-
-		} catch (Exception exc) {
-			exc.printStackTrace();
+			}
+			}
+			}
+		 catch (Exception o) {
+			o.printStackTrace();
 		}
-		finally {
-	        try {
-	            if (con != null && !con.isClosed()) {
-	                con.close();
-	            }
-	        } catch (SQLException ex) {
-	            ex.printStackTrace();
-	        }
-	    }
 
 	}
 
 	public static void main(String[] args) throws Exception {
-	    ConsultasRest consultasRest = new ConsultasRest();
-
-	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
-	        final String user = "admin";
-	        final String password = "ASdiioqw--ad45";
-	        con = DriverManager.getConnection(url, user, password);
-
-	        if (con == null) {
-	            System.out.println("No se ha establecido la conexión");
-	            return;
-	        } else {
-	            System.out.println("¡Felicidades! Se ha establecido la conexión");
-	            return;
-	        }
+	    new ConsultasRest();
+	        
 
 	    } 
 	}

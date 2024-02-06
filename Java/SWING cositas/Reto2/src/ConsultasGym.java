@@ -3,20 +3,16 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.awt.geom.RoundRectangle2D;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -28,6 +24,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 
+@SuppressWarnings("serial")
 public class ConsultasGym extends JFrame implements ActionListener, WindowListener, EventListener {
 	JComboBox cboQueMostrarGym;
 	JButton btnGym;
@@ -41,8 +38,8 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	String GymColumns[] = { "idDeportista", "NombreD", "ApellidoD", "Email", "Telefono", "FechaInicio", "idSubs" };
 	String SusColumns[] = { "idSubs", "PrecioSubs", "TipoSubs" };
 	String ZonaColumns[] = { "idZona", "NumTarjeta", "Zona" };
+	String pueba[] = {"uno", "dos", "tres", "cuatro", "cinco", "seis", "siete"};
 	static DefaultTableModel model = new DefaultTableModel();
-	static Connection con;
 
 	ConsultasGym() {
 		imgLogo = new ImageIcon("C:\\gatucos.png");
@@ -50,7 +47,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 		Color cbo = new Color(8, 170, 170);
 		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/MIIB.jpg");
 		setIconImage(imgIcon);
-		setTitle("Consultas al Gimnasio");
+		setTitle("qConsultas al Gimnasio");
 		Container c = getContentPane();
 
 		c.setBackground(new java.awt.Color(120, 200, 200));
@@ -88,11 +85,23 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 		tblResultado = new JTable(model);
 		tblResultado.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 		tblResultado.setFillsViewportHeight(true);
+		
+		model = new DefaultTableModel(); 
+		tblResultado.setModel(model); 
+		
 		JScrollPane scroll = new JScrollPane(tblResultado);
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		scroll.setSize(700, 400); 
+		scroll.setLocation(50, 150);
+		add(scroll);
+		tblResultado.setSize(700,400);
+		tblResultado.setLocation(50, 150);
+		add(tblResultado);
 		
-		
+		tblResultado.setVisible(true);
+		scroll.setVisible(true);
+		model.addRow(pueba);
 		setVisible(true);
 		setSize(800, 600);
 		setLayout(null);
@@ -146,10 +155,23 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	public void actionPerformed(ActionEvent e) {
 		String item = (String) cboQueMostrarGym.getSelectedItem();
 		System.out.println(item);
-		
+		Connection con;
 		try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
+            final String user = "admin";
+            final String password = "ASdiioqw--ad45";
+            con = DriverManager.getConnection(url, user, password);
+
+            if (con == null) {
+                System.out.println("No se ha establecido la conexión");
+                return;
+            } else {
+                System.out.println("¡Felicidades! Se ha establecido la conexión");
+            }
+         
 			
-			if ("Mostrar todos los Deportistas".equals(item)) {
+			if ("   Mostrar todos los Deportistas".equals(item)) {
 				System.out.println(1);					
 				
 				model.setColumnIdentifiers(GymColumns);
@@ -172,11 +194,10 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 					FechaInicio = dep.getString(6);
 					idSubs = dep.getInt(7);
 					model.addRow(new Object[] { id, nombreD, apellidoD, email, telefono, FechaInicio, idSubs });
-					
 				}
 				
 				
-			} else if ("Filtrar por nombre".equals(item)) {
+			} else if ("   Filtrar por nombre".equals(item)) {
 				txtFiltro.setVisible(true);
 				btnGym.setVisible(true);
 				if (e.getSource() == btnGym) {
@@ -205,7 +226,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 						model.addRow(new Object[] { id, nombreD, apellidoD, email, telefono, FechaInicio, idSubs });
 					}
 				}
-			} else if ("Mostrar todas las suscripciones".equals(item)) {
+			} else if ("   Mostrar todas las suscripciones".equals(item)) {
 
 				model.setColumnIdentifiers(SusColumns);
 				
@@ -222,12 +243,9 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 					model.addRow(new Object[] { idSubs, PrecioSubs, TipoSubs });
 				}
 
-			} else if ("Mostrar todas las zonas".equals(item)) {
+			} else if ("   Mostrar todas las zonas".equals(item)) {
 
 				model.setColumnIdentifiers(ZonaColumns);
-				 if (con == null) {
-			            System.out.println("No se ha establecido la conexión");
-				 }
 				Statement zonaState = con.createStatement();
 				ResultSet zona = zonaState.executeQuery("select * from ZonaDeporte");
 
@@ -241,23 +259,15 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 					model.addRow(new Object[] { idZona, NumTarjeta, Zona});
 				}
 
-			}
+			
 			tblResultado.setVisible(true);
-
-		} catch (Exception exc) {
-			exc.printStackTrace();
+			}
 		}
-		finally {
-	        try {
-	            if (con != null && !con.isClosed()) {
-	                con.close();
-	            }
-	        } catch (SQLException ex) {
-	            ex.printStackTrace();
-	        }
-	    }
-
-	}
+		catch (Exception o) {
+            o.printStackTrace();
+        }
+		} 
+	
 
 	public static void main(String[] args) throws Exception {
 	    ConsultasGym consultasGym = new ConsultasGym();
@@ -266,7 +276,7 @@ public class ConsultasGym extends JFrame implements ActionListener, WindowListen
 	        final String url = "jdbc:mysql://dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com:3306/BBDDProyectoGym1";
 	        final String user = "admin";
 	        final String password = "ASdiioqw--ad45";
-	        con = DriverManager.getConnection(url, user, password);
+	        Connection con = DriverManager.getConnection(url, user, password);
 
 	        if (con == null) {
 	            System.out.println("No se ha establecido la conexión");
