@@ -2,17 +2,29 @@ Tematica Pagina Web (Restaurante/Gimnasio en un lugar paradisiaco)
 MARKEL
 Pagina Web HTML, CSS, JS
 IVAN
-Formularios de reserva a restaurante y gimnasio
-IMANOL
+
 XML,XSD: Jerarquizacion del guardado de datos
 BEÑAT
-PHP, Inserciones a la Base de Datos
-BEÑAT
+Hemos hecho un esquema de guardado de datos con respecto a las tablas "Deportistas" y "Comensales" en las cuales hemos puesto patrones y restricciones para que el guardado de datos sea correcto y fiel a el orden y contenido de las tablas 
+______________________________________________________________________________________________________________________________________
+Formularios de reserva a restaurante y gimnasio y PHP, Inserciones a la Base de Datos
+
+Diseño de formularios usando HTML y CSS, colocada la etiqueta form para crear un formulario e insertarle tipos de Input, en este caso hay tres formularios los cuales son el formulario de Reservas a Restaurante, el de Suscripciones al Gimnasio y uno para Aplicar a un trabajo en el restaurante o el gimnasio.
+Estos formularios estan montados en archivos de extension PHP, pero inicialmente iba a haber un archivo PHP para cada formulario, ya que era mas sencillo de implementar. Finalmente se decidio integrar el PHP en los distintos formularios porque al enviar el formulario, salia una ventana del PHP. Al meter el HTML del formulario en el archivo PHP, el codigo de PHP se ejecutaba dentro del formulario, asi logrando evitar redirecciones.
+Tras eso se hizo un codigo JAVASCRIPT para que al enviar el formulario, saliera un Pop-Up en la parte superior de la pantalla indicando si se ha hecho la reserva correctamente o no. Si la reserva se guarda sin problemas en la base de datos, en el Pop-Up saldra el Nombre y apellido del/de la solicitante ademas de su correo electrónico y tras 5 segundos, sera redirigido/a a la pagina principal. En caso de haber cualquier error en la solicitud por campos dejados en blanco, se notificaria mediante un Pop-Up con un mensaje de error que dice "Todos los campos deben de ser rellenados, inténtelo de nuevo" y la pagina se recargara para que el formulario se vuelva a rellenar
+
+
+
+______________________________________________________________________________________________________________________________________
 JAVA, Consultas a base de datos (SWING)
-BEÑAT
+Programa Construido en Java SWING, este programa esta hecho para que los empleados de MIIB Restauracion & Deporte puedan consultar registros de la base de datos sobre el Restaurante y el Gimnasio. Cuenta con tres ventanas, una en la que eliges el sector de el cual quieres extraer datos, usando un JComboBox para elegir el sector y un JButton para confirmar la eleccion. Además cuenta con un fondo azul y el logo que representa nuestra marca. Al confirmar la eleccion de sector, se abrirá la respectiva ventana por encima.
+
+Por otro lado tenemos las ventanas de los sectores, estan conformadas de un JComboBox que te da cuatro opciones. En el caso del restaurante son: Mostrar todos los Comensales,  Filtrar por nombre, Mostrar todas las mesas, Mostrar todos los menus. En el gimnasio son:Mostrar todos los Deportistas, Filtrar por nombre, Mostrar todas las Suscripciones, Mostrar todos los Zonas. Al elegir la opcion que comparten ambos ("Filtrar por nombre"), se mostrara un cuadro de texto para filtrar los resultados por el nombre escrito y un boton para confirmar esos cambios. Al elegir cualquiera de las opciones, 
+
 Base de datos 
 
 Servidor AWS(Base de datos) y Servidor de Nazaret (Servidor Web)
+
 
 Entornos de desarrollo usados: VS Codium, Eclipse IDE, MySql Workbench
 IVAN

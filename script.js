@@ -1,4 +1,4 @@
-function mostrarGaleria() {
+function mostrarGaleria() { // Funcion para mostrar la galeria al hacer click en el boton
     var galeria = document.querySelector(".galeria");
     var gris = document.getElementById("gris");
 
@@ -10,7 +10,7 @@ function mostrarGaleria() {
         gris.style.display = "none";
     }
 }
-function ocultarGaleria() {
+function ocultarGaleria() { // Funcion para ocultar la galeria al hacer click en la X
     var galeria = document.querySelector(".galeria");
     var gris = document.getElementById("gris");
 
@@ -22,7 +22,7 @@ function ocultarGaleria() {
         gris.style.display = "block";
     }
 }
-function mostrarBarra() {
+function mostrarBarra() { // Funcion para mostrar el menu al hacer click en el menu tipo hamburguesa
     var barra_lateral = document.querySelector(".barra_lateral");
     var gris = document.getElementById("gris");
 
@@ -34,7 +34,7 @@ function mostrarBarra() {
         gris.style.display = "none";
     }
 }
-function ocultarBarra() {
+function ocultarBarra() { // Funcion para ocultar el menu al hacer click en la X
     var barra_lateral = document.querySelector(".barra_lateral");
     var gris = document.getElementById("gris");
 

@@ -2,6 +2,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -26,13 +27,14 @@ public class ConsultasBBDD extends JFrame implements ActionListener, WindowListe
 	ImageIcon imgLogo;
 	JLabel lblImagen;
 	ConsultasBBDD(){
-		
-		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/lobotomy.jpg");
-		imgLogo = new ImageIcon("/imagenes/Gimnasio1.jpg");
-		setIconImage(imgIcon);
+		imgLogo = new ImageIcon("E:\\gatucos.png");
 		lblImagen = new JLabel(imgLogo);
-		setTitle("Consultas a la Base de Datos");
-		
+		Image imgIcon = Toolkit.getDefaultToolkit().getImage("C://Users/alu01/Documents/lobotomy.jpg");
+		setIconImage(imgIcon);
+		setTitle("qConsultas a la Base de Datos");
+		Container c = getContentPane();
+
+		c.setBackground(new java.awt.Color(120, 200, 200));
 		cboEligeSector = new JComboBox(sector);
 		btnSector = new JButton("Elegir!");
 		
