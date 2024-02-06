@@ -1,6 +1,8 @@
 Tematica Pagina Web (Restaurante/Gimnasio en un lugar paradisiaco)
 MARKEL
 Pagina Web HTML, CSS, JS
+Al entrar a página principal, aparece texto personalizado y fotos de nuestro complejo.
+Más abajo hay botones, que te llevan a registrarse. Allí poner tus datos personales, eliges tiempo que mejor para ti y registras
 IVAN
 Formularios de reserva a restaurante y gimnasio
 IMANOL
