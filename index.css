@@ -392,8 +392,8 @@ body {}
 }
 
 .container img {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 450px;
+  max-height: 450px;
   float: left;
   border: 3px solid white;
   border-radius: 10px;
