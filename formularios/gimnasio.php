@@ -27,7 +27,19 @@
       <label for="tel" class="form__label">Telefono</label>
 
 
-
+      <select name="zona" id="zona" class="form__input">
+        <option value="0">Elige la zona</option>
+        <option value="1">Kayak</option>
+        <option value="2">Tenis</option>
+        <option value="3">Gimnasio</option>
+        <option value="4">Yoga</option>
+        <option value="5">Pilates</option>
+        <option value="6">Golf</option>
+        <option value="7">Surf</option>
+        <option value="8">Baloncesto/Fútbol</option>
+        <option value="9">Anaeróbicos</option>
+        <option value="10">Piscina</option>
+      </select>
       <select name="suscripcion" class="form__input" id="select" name="suscripcion">
         <option value="0">Elige tu suscripción</option>
         <option value="1">Una sesión(20€) </option>
@@ -47,36 +59,7 @@
     </form>
 </div>
 
-<script type="text/javascript">
-    function Mensaje() {
-    // variables en las que guardo los datos de los campos
-    var nombre = document.getElementById("name").value;
-    var apellido = document.getElementById("apellido").value;
-    var email = document.getElementById("email").value;
-    var telefono = document.getElementById("Telefono").value;
-    var suscripcion = document.getElementById("select").value;
-    var fecha = document.getElementById("fecha").value;
-    var nombre_apellido = document.getElementById("name").value + ' ' + document.getElementById("apellido").value;
-    // muestra un pop up, si todos los campos estan completos, te da la bienvenida. Si no, te da error al insertar los datos y vuelve al punto de partida
-    if (nombre.length !== 0 && apellido.length !== 0 && fecha.length !== 0 && email.length !== 0 && telefono.length !== 0 && suscripcion.length !== 0) {
-                window.alert("Bienvenido " + nombre_apellido + " de correo " + email);
-                setTimeout(function () {
-                    document.getElementById("subject").disabled = true; // Deshabilitar el botón después de hacer clic
-                    setTimeout(function () {
-                        document.getElementById("subject").disabled = false; // Habilitar el botón después de 5 segundos
-                    }, 5000);
-                }, 1); // Agregar un pequeño retraso antes de deshabilitar el botón
-                window.location.href("../index.html")
-                return true; // Permitir el envío del formulario después del retraso
-            } else {
-                window.alert("Error al insertar los datos, inténtelo de nuevo");
-                setTimeout(function () {
-                    window.location.reload();
-                }, 5000);
-                return false; // Evitar el envío del formulario si hay un error
-            }
-        }
-    </script>
+
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") { // Solo ejecutar este código si el formulario se ha enviado
@@ -89,8 +72,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Solo ejecutar este código si el 
     $suscripcion = $_POST["suscripcion"];
     $fecha = $_POST["fecha"];
     $fecha_format = substr($fecha, 0, 10) . ' ' . substr($fecha, 11, 5) . ':00';
-    $idZona = rand(0, 19);
-    echo $nombre . " " . $apellidos . " " . $email . " " . $telefono . " " . $suscripcion . " " . $fecha_format;
+    $idZona = $_POST["zona"];
+    echo $nombre . " " . $apellidos . " " . $email . " " . $telefono . " " . $suscripcion . " " . $fecha_format . " " . $zona;
 
     // Variables con las credenciales del servidor/base de datos
     $servidor = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
@@ -119,7 +102,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Solo ejecutar este código si el 
     $conn->query($sql_entrenan);
     
     // Esto llama a la funcion de JavaScript 
-    echo "<script type='text/javascript'>Mensaje();</script>";
+    echo '<script type="text/javascript">',
+    'function Mensaje()',
+    '</script>';
 
     // Cerrar conexión
     $conn->close();
