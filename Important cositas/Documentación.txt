@@ -1,6 +1,8 @@
 Tematica Pagina Web (Restaurante/Gimnasio en un lugar paradisiaco)
 MARKEL
 Pagina Web HTML, CSS, JS
+Al entrar a página principal, aparece texto personalizado y fotos de nuestro complejo. Más abajo hay botones, 
+que te llevan a registrarse. Allí puedes poner tus datos personales para registrarse. A continuación se muestran botones pulsando sobre los cuales podrá conocer más información sobre el restaurante o gimnasio.  También hay un botón en nuestro sitio web que lo lleva a una galería de fotos.  Allí podrás hacerte una mejor idea de cómo son nuestros lugares.  Casi al final hay un mapa.  Podrás utilizarlo para estar seguro de la dirección de nuestro establecimiento.  En la parte inferior hay un enlace a nuestra página de políticas.
 IVAN
 
 XML,XSD: Jerarquizacion del guardado de datos
