@@ -1,6 +1,6 @@
 Guión MIIB
 
-[El video comienza con imágenes panorámicas del impresionante resort deportivo, destacando las instalaciones de alta gama y la belleza natural que lo rodea. Una música relajante y motivadora acompaña las imágenes.]
+[El video comienza con tomas panorámicas del impresionante resort deportivo, resaltando las instalaciones de alta gama y la belleza natural que lo rodea. Una música relajante y motivadora acompaña las imágenes.]
 
 Beñat: Hello, everyone! I'm Beñat.
 
@@ -10,36 +10,48 @@ Markel: I'm Markel!
 
 Imanol: And I'm Imanol! Welcome to this incredible sports resort where fun and wellness go hand in hand!
 
-Beñat: Today, we're going to show you all the wonders this place has to offer. From exciting sports activities to delicious dining options and a top-notch gym.
+Today, we're not just going to explore the resort, but also take you behind the scenes to show you how we brought this experience to life, starting with our website.
 
-[El video corta a los cuatro amigos caminando por los terrenos del resort, con sonrisas en sus rostros y gestos de emoción mientras señalan diferentes áreas.]
+[Corte a los cuatro amigos reunidos alrededor de una computadora portátil, discutiendo y señalando la página web.]
 
-Ivan: Look at this! Here is where you can engage in a variety of water sports, from kayaking to paddleboarding. Fun is guaranteed!
+Beñat: When we envisioned the website, we knew we wanted to showcase every aspect of the resort, including our amazing restaurant and state-of-the-art gym.
 
-Markel: And if you prefer activities on solid ground, we have tennis courts, golf courses, and hiking trails. There are no limits to adventure!
+Ivan: But since we're not web designers or developers, we needed a solution that was easy to use yet powerful enough to bring our vision to life.
 
-Imanol: And let's not forget about the options for relaxation and rejuvenation. From spa treatments to tranquil pools, this place has everything you need to unwind and pamper yourself a bit.
+Markel: That's when we discovered website builders. With these tools, we were able to create a professional-looking website without any coding knowledge.
 
-Beñat: But wait, the fun doesn't end there. How about joining an outdoor yoga class while enjoying panoramic views? Or if you're looking for something more intense, our fully-equipped gym has everything you need to keep your body in shape.
+Imanol: And the best part is that we could easily add sections for the restaurant and gym, making it simple for visitors to learn about all the amenities we offer.
 
-[El video corta a una escena en el restaurante del resort, donde los amigos disfrutan de una comida saludable y sabrosa.]
+[Corte a imágenes de los amigos tomando fotos y videos alrededor del resort para agregar a la página web.]
 
-Ivan: After a day filled with activities, it's time to recharge. And what better way to do that than with a delicious meal in our restaurant? Here, you can enjoy a variety of fresh and nutritious dishes that will satisfy even the most discerning palate.
+Beñat: We wanted the website to be more than just a digital brochure. We wanted it to be an immersive experience that gave people a taste of what it's like to visit the resort.
 
-Markel: Plus, our restaurant offers options for specific diets, such as vegetarian and gluten-free, to ensure that all guests can enjoy an exceptional culinary experience.
+Ivan: So, we went around taking photos and videos of the restaurant, showcasing our delicious menu options and inviting atmosphere.
 
-Imanol: So there you have it, if you're looking for a destination that combines adventure, wellness, and luxury, this sports resort is the perfect place for you.
+Markel: And we made sure to capture the energy of the gym, highlighting our state-of-the-art equipment and motivating workout spaces.
 
-[El video muestra a los amigos participando en diversas actividades deportivas y relajantes en el resort, como jugar al tenis, disfrutar de masajes en el spa y relajarse en la piscina.]
+[Corte a imágenes de los amigos trabajando juntos para redactar contenido para la página web.]
 
-Beñat: Whether you're seeking energetic thrills or moments of tranquility, this resort has something for everyone. And best of all, you can customize your experience to your preferences and needs.
+Imanol: Of course, visuals are important, but so is the written content. We wanted to make sure that everything on the website was informative and engaging.
 
-Ivan: Additionally, the highly-trained staff team is always available to assist you and ensure you have the best stay possible. Their kindness and professionalism make every moment here truly memorable.
+Beñat: We wrote descriptions for each restaurant dish, highlighting our chef's creative flair and the fresh, locally-sourced ingredients.
 
-[El video termina con los amigos despidiéndose mientras contemplan la hermosa puesta de sol desde el resort.]
+Ivan: And for the gym, we emphasized our personalized training programs and expert fitness instructors who are dedicated to helping our guests achieve their wellness goals.
 
-Imanol: Thank you for joining us on this adventure. We hope to see you soon here in our sports paradise!
+[Corte a los amigos revisando la página web terminada.]
 
-Ivan: Goodbye for now!
+Markel: After weeks of hard work, we finally had our website up and running.
 
-Beñat: Farewell, friends! See you at the resort!
+Imanol: And we're really proud of how it turned out. It's user-friendly, visually stunning, and captures the essence of what makes this resort so special.
+
+[Corte a los amigos explorando el resort y disfrutando de diversas actividades.]
+
+Beñat: So, whether you're craving a gourmet meal at our restaurant or a rejuvenating workout at our gym, we invite you to visit our website and see everything that this sports resort has to offer.
+
+[El video termina con los amigos despidiéndose mientras observan el hermoso atardecer desde el resort.]
+
+Ivan: Thank you for joining us on this journey. We hope to see you soon here in our sports paradise!
+
+Markel: Goodbye for now!
+
+Imanol: Farewell, friends! And remember, adventure awaits at the resort!
