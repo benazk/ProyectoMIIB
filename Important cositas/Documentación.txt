@@ -9,24 +9,45 @@ XML,XSD: Jerarquizacion del guardado de datos
 BEÑAT
 Hemos hecho un esquema de guardado de datos con respecto a las tablas "Deportistas" y "Comensales" en las cuales hemos puesto patrones y restricciones para que el guardado de datos sea correcto y fiel a el orden y contenido de las tablas 
 ______________________________________________________________________________________________________________________________________
-Formularios de reserva a restaurante y gimnasio y PHP, Inserciones a la Base de Datos
 
-Diseño de formularios usando HTML y CSS, colocada la etiqueta form para crear un formulario e insertarle tipos de Input, en este caso hay tres formularios los cuales son el formulario de Reservas a Restaurante, el de Suscripciones al Gimnasio y uno para Aplicar a un trabajo en el restaurante o el gimnasio.
-Estos formularios estan montados en archivos de extension PHP, pero inicialmente iba a haber un archivo PHP para cada formulario, ya que era mas sencillo de implementar. Finalmente se decidio integrar el PHP en los distintos formularios porque al enviar el formulario, salia una ventana del PHP. Al meter el HTML del formulario en el archivo PHP, el codigo de PHP se ejecutaba dentro del formulario, asi logrando evitar redirecciones.
+FORMULARIOS DE RESERVA A GIMNASIO Y RESTAURANTE Y PHP, INSERCIONES A LA BASE DE DATOS
+
+Cuando comenzamos a crear los formularios, ibamos a crear un solo formulario con un desplegable y según lo que se elija en el desplegable, se Reserva el Restaurante o el Gimnasio. Al final se optó por crear un formulario individual para cada tipo de reserva
+
+Nos quedamos con tres formularios los cuales son el formulario de Reservas a Restaurante, el de Suscripciones al Gimnasio y uno para Aplicar a un trabajo en el restaurante o el gimnasio.
+Estos formularios estan montados en archivos de extension PHP, pero inicialmente iba a haber un archivo PHP para cada formulario, ya que era mas sencillo de implementar. Finalmente se decidio integrar el PHP en los distintos formularios porque cuando estaban en archivos separados, al enviar el formulario, salia una ventana del PHP. Al meter el HTML del formulario en el archivo PHP, el codigo de PHP se ejecutaba dentro del formulario, asi logrando evitar redirecciones.
+
+Dentro del codigo de PHP se empieza creando la conexion a la base de datos, creando variables que guardan los parametros para la conexion y usandolos en otra variable para la conexion: 
+$conn = new mysqli($servidor, $usuario, $password, $basedatos); y luego se verifica la conexion por si hay errores al conectarse. Tras verificar la conexión, se crean variables con la query a ejecutar en la base de datos y esas variable se ejecutan llamando a la variable de la conexión: $conn->query($consulta). Tras haber hecho todas las query necesarias, se cierra la conexión: $conn->close();
+
 Tras eso se hizo un codigo JAVASCRIPT para que al enviar el formulario, saliera un Pop-Up en la parte superior de la pantalla indicando si se ha hecho la reserva correctamente o no. Si la reserva se guarda sin problemas en la base de datos, en el Pop-Up saldra el Nombre y apellido del/de la solicitante ademas de su correo electrónico y tras 5 segundos, sera redirigido/a a la pagina principal. En caso de haber cualquier error en la solicitud por campos dejados en blanco, se notificaria mediante un Pop-Up con un mensaje de error que dice "Todos los campos deben de ser rellenados, inténtelo de nuevo" y la pagina se recargara para que el formulario se vuelva a rellenar
 
+Eso se hizo con una funcion de javascrip llamada "Mensaje()" que se ejecuta tras enviar el formulario. Esta funcion extrae los datos del formulario y los guarda en variables, para luego usarlas en la condicion. Si la condicion se cumple, se crea un window.alert() dentro de un timeOut para que haya 5 segundos de espera tras el Pop-Up y se redirija a la pagina principal
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+JAVA, CONSULTAS A LA BASE DE DATOS(SWING)
+Al empezar, pensabamos hacer todas las peticiones(las de ambos sectores) en una misma ventana y solo usar una ventana pero al final pensamos que seria mejor dividirlo en sectores para optimizar el codigo y facilitar su lectura al estar dividido.
 
-______________________________________________________________________________________________________________________________________
-JAVA, Consultas a base de datos (SWING)
 Programa Construido en Java SWING, este programa esta hecho para que los empleados de MIIB Restauracion & Deporte puedan consultar registros de la base de datos sobre el Restaurante y el Gimnasio. Cuenta con tres ventanas, una en la que eliges el sector de el cual quieres extraer datos, usando un JComboBox para elegir el sector y un JButton para confirmar la eleccion. Además cuenta con un fondo azul y el logo que representa nuestra marca. Al confirmar la eleccion de sector, se abrirá la respectiva ventana por encima.
 
-Por otro lado tenemos las ventanas de los sectores, estan conformadas de un JComboBox que te da cuatro opciones. En el caso del restaurante son: Mostrar todos los Comensales,  Filtrar por nombre, Mostrar todas las mesas, Mostrar todos los menus. En el gimnasio son:Mostrar todos los Deportistas, Filtrar por nombre, Mostrar todas las Suscripciones, Mostrar todos los Zonas. Al elegir la opcion que comparten ambos ("Filtrar por nombre"), se mostrara un cuadro de texto para filtrar los resultados por el nombre escrito y un boton para confirmar esos cambios. Al elegir cualquiera de las opciones, 
+Por otro lado tenemos las ventanas de los sectores, estan conformadas de un JComboBox que te da cuatro opciones. En el caso del restaurante son: Mostrar todos los Comensales,  Filtrar por nombre, Mostrar todas las mesas, Mostrar todos los menus. En el gimnasio son: Mostrar todos los Deportistas, Filtrar por nombre, Mostrar todas las Suscripciones, Mostrar todos los Zonas. Al elegir la opcion que comparten ambos ("Filtrar por nombre"), se mostrara un cuadro de texto para filtrar los resultados por el nombre escrito y un boton para confirmar esos cambios. Al elegir cualquiera de las opciones y confirmar la eleccion, el programa te mostrara una tabla (hecha con JTable) con la informacion pedida. Estas ventanas tienen un fondo azul y botones de color turquesa oscuro, ademas de el logo de MIIB como icono de aplicacion
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Base de datos 
+BASE DE DATOS
 
-Servidor AWS(Base de datos) y Servidor de Nazaret (Servidor Web)
+Inicialmente iba a haber un hotel, con lo cual iba a haber tres tablas mas (ZonaDescanso, Suites, Descansa[Tabla N:M] y Huespedes) pero tras haber hecho la base de datos completa, se decidio que seria muy complicado hacerlo asi, con lo que descartamos la idea del hotel y seguimos con el resto de tablas. Tras rehacer toda la base de datos y ponerse a hacer los formularios, nos dimos cuenta de que la base de datos no estaba bien diseñada asi que la volvimos a rehacer y al final nos quedamos con ese diseño.
 
+Nuestra base de datos esta principalmente compuesta por dos tablas centrales, ZonaDeporte y ZonaRestauracion. Ambas tablas estan conectadas a la tabla de empleados con relacion 1:N[Trabajan] (de Zona a Empleado) en ambos casos, pues los empleados trabajan en ambas zonas. La tabla "ZonaRestauracion(idMesa, MesaNum)" tiene conectada la tabla "Menu(idMenu, Precio, ObjetoMenu)" mediante una relacion N:M[SeSirve] y tiene conectada la tabla "Comensales(idComensal, NombreC, ApellidoC, Email, Telefono, DiaYHora)" mediante una relacion N:1 (Hacia ZonaRestauracion). A su vez, la tabla Menu esta conectada a la tabla Comensales con una relacion de 1:N[EsComido] (de menu a Comensal).
+La tabla "ZonaDeporte(idZona, NumTarjeta, Zona)" esta conectada a la tabla "Deportistas(idDeportista, NombreD, ApellidoD, Email, Telefono, idZona)" con una relacion N:M[Entrenan] y la tabla Deportistas esta conectada a la tabla 
+"Suscripcion(idSubs, TipoSubs, PrecioSubs)" usando una relacion de 1:N[Tienen] (de Suscripcion a Deportistas).
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ 
+SERVIDOR AWS(Base de datos) y SERVIDOR DE NAZARET(Servidor Web)
 
+Al inicio pensabamos alojar tanto la base de datos como la pagina web dentro del servidor EC2 de AWS Academy, pero tuvimos problemas con JAVA asi que terminamos creando un servidor RDS para la base de datos y usando el servidor de nazaret como servidor web.
+
+El servidor RDS de Amazon Web Services lo usamos para alojar la base de datos. Es un tipo de instancia especifica para montar bases de datos y en el que se pueden crear varias bases de datos. Por otro lado esta el servidor de Nazaret, el 
+cual lo usamos para alojar la pagina web y que pueda ser visible tanto desde la misma red como desde una red externa. Se puede acceder desde internet poniendo la ip del router al que esta conectado el servidor (85.50.79.98) y el puerto ssh junto con el puerto HTTP (23 y 80). La URL sería la siguiente: http://     	   85.50.79.98            :2380
+								 (protocolo http) (ip del router)  (puertos ssh y http)
 Entornos de desarrollo usados: VS Codium, Eclipse IDE, MySql Workbench
 IVAN

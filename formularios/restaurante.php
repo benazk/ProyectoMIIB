@@ -10,7 +10,7 @@
     <div class="container">
         <h2>¡Rellena el formulario!</h2>
         <!-- Formulario de reserva en el restaurante -->
-        <form action="#" method="post" class="form">
+        <form action="#" method="POST" class="form">
 
             <input type="text" placeholder="Nombre" class="form__input" id="nombre" name="nombre" />
             <label for="name" class="form__label">Nombre</label>
@@ -63,6 +63,7 @@
                         document.getElementById("subject").disabled = false; // Habilitar el botón después de 5 segundos
                     }, 5000);
                 }, 1); // Agregar un pequeño retraso antes de deshabilitar el botón
+                window.location.href("../index.html")
                 return true; // Permitir el envío del formulario después del retraso
             } else {
                 window.alert("Error al insertar los datos, inténtelo de nuevo");
