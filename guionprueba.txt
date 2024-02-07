@@ -16,7 +16,9 @@ Today, we're not just going to explore the resort, but also take you behind the 
 
 Beñat: When we envisioned the website, we knew we wanted to showcase every aspect of the resort, including our amazing restaurant and state-of-the-art gym.
 
-Markel: we used coding tools to develop the website . With these tools, we were able to create a professional-looking website using some of our coding knowledge.
+Ivan: But since we're not web designers or developers, we needed a solution that was easy to use yet powerful enough to bring our vision to life.
+
+Markel: That's when we discovered website builders. With these tools, we were able to create a professional-looking website without any coding knowledge.
 
 Imanol: And the best part is that we could easily add sections for the restaurant and gym, making it simple for visitors to learn about all the amenities we offer.
 
@@ -34,13 +36,10 @@ Imanol: Of course, visuals are important, but so is the written content. We want
 
 Beñat: We wrote descriptions for each restaurant dish, highlighting our chef's creative flair and the fresh, locally-sourced ingredients.
 
-Ivan: And for the Sport resort, we emphasized our personalized training programs and expert fitness instructors who are dedicated to helping our guests achieve their wellness goals.
+Ivan: And for the gym, we emphasized our personalized training programs and expert fitness instructors who are dedicated to helping our guests achieve their wellness goals.
 
 [Corte a los amigos revisando la página web terminada.]
 
-<<<<<<< HEAD
-Beñat: Farewell, friends! See you at the resort!
-=======
 Markel: After weeks of hard work, we finally had our website up and running.
 
 Imanol: And we're really proud of how it turned out. It's user-friendly, visually stunning, and captures the essence of what makes this resort so special.
@@ -56,4 +55,9 @@ Ivan: Thank you for joining us on this journey. We hope to see you soon here in 
 Markel: Goodbye for now!
 
 Imanol: Farewell, friends! And remember, adventure awaits at the resort!
->>>>>>> 80e97dbc67370f5a88f22ed96cfd5fe2dd320ead
+
+
+
+Motivos
+Localización del resort
+Funcionamiento de la página web
