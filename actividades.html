@@ -10,28 +10,23 @@
   <header>
     <h1>MIIB RESORT</h1>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Acerca de</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
+
   <section>
     <select name="zona" id="zona" class="form__input" onchange="mostrarImagen()">
       <option value="0">Elige la zona</option>
-      <option value="1" data-imagen="kayak.jpg">Kayak</option>
-      <option value="2" data-imagen="tenis.jpg">Tenis</option>
-      <option value="3" data-imagen="gimnasio.jpg">Gimnasio</option>
-      <option value="4" data-imagen="yoga.jpg">Yoga</option>
-      <option value="5" data-imagen="pilates.jpg">Pilates</option>
-      <option value="6" data-imagen="golf.jpg">Golf</option>
-      <option value="7" data-imagen="surf.jpg">Surf</option>
-      <option value="8" data-imagen="baloncesto_futbol.jpg">Baloncesto/Fútbol</option>
-      <option value="10" data-imagen="piscina.jpg">Piscina</option>
+      <option value="1" data-imagen="imagenes/kayak.jpg">Kayak</option>
+      <option value="2" data-imagen="imagenes/tenis.jpg">Tenis</option>
+      <option value="3" data-imagen="imagenes/gimnasio.jpg">Gimnasio</option>
+      <option value="4" data-imagen="imagenes/yoga.jpg">Yoga</option>
+      <option value="5" data-imagen="imagenes/pilates.jpg">Pilates</option>
+      <option value="6" data-imagen="imagenes/golf.jpg">Golf</option>
+      <option value="7" data-imagen="imagenes/surf.jpg">Surf</option>
+      <option value="8" data-imagen="imagenes/baloncesto.avif">Baloncesto/Fútbol</option>
+      <option value="10" data-imagen="imagenes/piscina.jpg">Piscina</option>
     </select>
     <div id="imagenSeleccionada">
       <img src="" alt="" id="imagenZona">
+      <div id="informacionActividad"></div>
     </div>
   </section>
 
@@ -39,29 +34,41 @@
     function mostrarImagen() {
       var zonaSeleccionada = document.getElementById("zona");
       var imagenSeleccionada = document.getElementById("imagenZona");
+      var informacionActividad = document.getElementById("informacionActividad");
       var rutaImagen = "";
+      var informacion = "";
       
       if (zonaSeleccionada.value === "1") {
         rutaImagen = "imagenes/kayak.jpg";
+        informacion = "Actividad: Kayak<br>Ubicación: Playa";
       } else if (zonaSeleccionada.value === "2") {
         rutaImagen = "imagenes/tenis.jpg";
+        informacion = "Actividad: Tenis<br>Ubicación: Canchas de tenis";
       } else if (zonaSeleccionada.value === "3") {
         rutaImagen = "imagenes/gimnasio.jpg";
+        informacion = "Actividad: Gimnasio<br>Ubicación: Edificio principal";
       } else if (zonaSeleccionada.value === "4") {
         rutaImagen = "imagenes/yoga.jpg";
+        informacion = "Actividad: Yoga<br>Ubicación: Sala de yoga";
       } else if (zonaSeleccionada.value === "5") {
         rutaImagen = "imagenes/pilates.jpg";
+        informacion = "Actividad: Pilates<br>Ubicación: Sala de pilates";
       } else if (zonaSeleccionada.value === "6") {
         rutaImagen = "imagenes/golf.jpg";
+        informacion = "Actividad: Golf<br>Ubicación: Campo de golf";
       } else if (zonaSeleccionada.value === "7") {
         rutaImagen = "imagenes/surf.jpg";
+        informacion = "Actividad: Surf<br>Ubicación: Playa";
       } else if (zonaSeleccionada.value === "8") {
         rutaImagen = "imagenes/baloncesto.avif";
+        informacion = "Actividad: Baloncesto/Fútbol<br>Ubicación: Canchas polideportivas";
       } else if (zonaSeleccionada.value === "10") {
         rutaImagen = "imagenes/piscina.jpg";
+        informacion = "Actividad: Piscina<br>Ubicación: Área de la piscina";
       }
 
       imagenSeleccionada.src = rutaImagen;
+      informacionActividad.innerHTML = informacion;
     }
   </script>
 </body>
