@@ -1,45 +1,61 @@
 Guión MIIB
 
-[El video comienza con imágenes panorámicas del impresionante resort deportivo, destacando las instalaciones de alta gama y la belleza natural que lo rodea. Una música relajante y motivadora acompaña las imágenes.]
+Title: "Exploring the Sports Resort: A Web Development Journey with Beñat, Ivan, Markel, and Imanol"
 
-Beñat: Hello, everyone! I'm Beñat.
+[El video comienza con tomas panorámicas del impresionante resort deportivo en Bora Bora, mostrando sus instalaciones de alta gama y la belleza natural que lo rodea. Una música relajante pero motivadora establece el tono.]
 
-Ivan: And I'm Ivan!
+X: Hello, everyone! I'm Beñat.
 
-Markel: I'm Markel!
+Y: And I'm Ivan!
 
-Imanol: And I'm Imanol! Welcome to this incredible sports resort where fun and wellness go hand in hand!
+Z: I'm Markel!
 
-Beñat: Today, we're going to show you all the wonders this place has to offer. From exciting sports activities to delicious dining options and a top-notch gym.
+W: And I'm Imanol! Welcome to this incredible sports resort located in the stunning island paradise of Bora Bora, where fun and wellness intertwine amidst the crystal-clear waters and lush landscapes.
 
-[El video corta a los cuatro amigos caminando por los terrenos del resort, con sonrisas en sus rostros y gestos de emoción mientras señalan diferentes áreas.]
+Today, we're not only going to explore the resort but also take you behind the scenes to show you how we brought this experience to life through web development.
 
-Ivan: Look at this! Here is where you can engage in a variety of water sports, from kayaking to paddleboarding. Fun is guaranteed!
+[Corte a los cuatro amigos reunidos alrededor de una computadora portátil, discutiendo y señalando el sitio web.]
 
-Markel: And if you prefer activities on solid ground, we have tennis courts, golf courses, and hiking trails. There are no limits to adventure!
+X: As web development students, we saw the opportunity to showcase our skills by creating a website that truly embodies the essence of the resort.
 
-Imanol: And let's not forget about the options for relaxation and rejuvenation. From spa treatments to tranquil pools, this place has everything you need to unwind and pamper yourself a bit.
+Y: We began with the HTML structure, defining the content and layout of each page. Here's a glimpse of our code:
 
-Beñat: But wait, the fun doesn't end there. How about joining an outdoor yoga class while enjoying panoramic views? Or if you're looking for something more intense, our fully-equipped gym has everything you need to keep your body in shape.
+[Se muestra una explicación simplificada del código HTML sin jerga técnica, destacando cómo se estructuraron los botones y enlaces.]
 
-[El video corta a una escena en el restaurante del resort, donde los amigos disfrutan de una comida saludable y sabrosa.]
+X: Let me tell you a bit about the buttons we implemented on our website. Each button was carefully crafted to ensure a seamless user experience. Whether it's the menu button for easy navigation or the registration button for quick access to our resort's amenities, every button serves a specific purpose.
 
-Ivan: After a day filled with activities, it's time to recharge. And what better way to do that than with a delicious meal in our restaurant? Here, you can enjoy a variety of fresh and nutritious dishes that will satisfy even the most discerning palate.
+[Corte de imágenes de los amigos revisando el sitio web terminado.]
 
-Markel: Plus, our restaurant offers options for specific diets, such as vegetarian and gluten-free, to ensure that all guests can enjoy an exceptional culinary experience.
+X: We wanted to make sure that visitors could effortlessly explore all that our website has to offer with just a simple click. It's amazing how something as small as a button can make such a big difference in enhancing the overall functionality and appeal of a website.
 
-Imanol: So there you have it, if you're looking for a destination that combines adventure, wellness, and luxury, this sports resort is the perfect place for you.
+W: Next, we added styling using CSS to make the website visually appealing and cohesive. Take a look at how we styled the header and navigation:
 
-[El video muestra a los amigos participando en diversas actividades deportivas y relajantes en el resort, como jugar al tenis, disfrutar de masajes en el spa y relajarse en la piscina.]
+[Se muestra una explicación simplificada del código CSS sin jerga técnica, enfatizando cómo se diseñaron los botones para una apariencia atractiva y coherente.]
 
-Beñat: Whether you're seeking energetic thrills or moments of tranquility, this resort has something for everyone. And best of all, you can customize your experience to your preferences and needs.
+[Se muestra metraje de los amigos trabajando juntos para capturar contenido para el sitio web.]
 
-Ivan: Additionally, the highly-trained staff team is always available to assist you and ensure you have the best stay possible. Their kindness and professionalism make every moment here truly memorable.
+X: To ensure that the website accurately reflects the resort experience, we spent hours capturing photos and videos of every area, including the restaurant and the gym.
 
-[El video termina con los amigos despidiéndose mientras contemplan la hermosa puesta de sol desde el resort.]
+Y: We wanted visitors to feel like they were truly here, experiencing the beauty and excitement of the resort firsthand.
 
-Imanol: Thank you for joining us on this adventure. We hope to see you soon here in our sports paradise!
+[Se muestra metraje de los amigos revisando el sitio web terminado.]
 
-Ivan: Goodbye for now!
+Z: After weeks of hard work and dedication, we finally had our website up and running.
 
-Beñat: Farewell, friends! See you at the resort!
+W: And we're incredibly proud of what we've accomplished. Not only does the website showcase the beauty and amenities of the resort, but it also demonstrates our skills and passion for web development.
+
+[Se muestra metraje de los amigos explorando el resort y disfrutando de diversas actividades.]
+
+X: So, whether you're planning your next vacation or simply seeking inspiration, we invite you to visit our website and experience everything that this sports resort in Bora Bora has to offer, from exhilarating water sports to relaxing beachside lounging.
+
+[El video termina con los amigos despidiéndose mientras observan el hermoso atardecer desde el resort.]
+
+Y: Thank you for joining us on this journey through web development. We hope to see you soon here in our sports paradise!
+
+Z: Goodbye for now!
+
+W: Farewell, friends! And remember, adventure awaits at the resort!
+
+Motivos
+Localización del resort
+Funcionamiento de la página web

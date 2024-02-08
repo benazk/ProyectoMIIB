@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIIB RESORT</title>
+  <link rel="stylesheet" href="actividades.css">
+</head>
+<body>
+  <header>
+    <h1>MIIB RESORT</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <section>
+    <select name="zona" id="zona" class="form__input" onchange="mostrarImagen()">
+      <option value="0">Elige la zona</option>
+      <option value="1" data-imagen="kayak.jpg">Kayak</option>
+      <option value="2" data-imagen="tenis.jpg">Tenis</option>
+      <option value="3" data-imagen="gimnasio.jpg">Gimnasio</option>
+      <option value="4" data-imagen="yoga.jpg">Yoga</option>
+      <option value="5" data-imagen="pilates.jpg">Pilates</option>
+      <option value="6" data-imagen="golf.jpg">Golf</option>
+      <option value="7" data-imagen="surf.jpg">Surf</option>
+      <option value="8" data-imagen="baloncesto_futbol.jpg">Baloncesto/Fútbol</option>
+      <option value="10" data-imagen="piscina.jpg">Piscina</option>
+    </select>
+    <div id="imagenSeleccionada">
+      <img src="" alt="" id="imagenZona">
+    </div>
+  </section>
+
+  <script>
+    function mostrarImagen() {
+      var zonaSeleccionada = document.getElementById("zona");
+      var imagenSeleccionada = document.getElementById("imagenZona");
+      var rutaImagen = "";
+      
+      if (zonaSeleccionada.value === "1") {
+        rutaImagen = "imagenes/kayak.jpg";
+      } else if (zonaSeleccionada.value === "2") {
+        rutaImagen = "imagenes/tenis.jpg";
+      } else if (zonaSeleccionada.value === "3") {
+        rutaImagen = "imagenes/gimnasio.jpg";
+      } else if (zonaSeleccionada.value === "4") {
+        rutaImagen = "imagenes/yoga.jpg";
+      } else if (zonaSeleccionada.value === "5") {
+        rutaImagen = "imagenes/pilates.jpg";
+      } else if (zonaSeleccionada.value === "6") {
+        rutaImagen = "imagenes/golf.jpg";
+      } else if (zonaSeleccionada.value === "7") {
+        rutaImagen = "imagenes/surf.jpg";
+      } else if (zonaSeleccionada.value === "8") {
+        rutaImagen = "imagenes/baloncesto.avif";
+      } else if (zonaSeleccionada.value === "10") {
+        rutaImagen = "imagenes/piscina.jpg";
+      }
+
+      imagenSeleccionada.src = rutaImagen;
+    }
+  </script>
+</body>
+</html>

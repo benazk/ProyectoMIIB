@@ -21,15 +21,50 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Olas */
 .wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("https://i.ibb.co/wQZVxxk/wave.png");
-    background-size: 1000px 100px;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateFoot 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateFoot 3s linear infinite;
+}
+/* Olas */
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
   }
+<<<<<<< HEAD
   #atras{
     height: 50px;
     width: auto;
@@ -39,43 +74,18 @@ a:hover {
     opacity: 1;
     bottom: 0;
     animation: animateWaves 4s linear infinite;
+=======
+  100% {
+    background-positon-x: 0px;
+>>>>>>> 8c0eead6ba69e4829edc8ce8d0622436785d448d
   }
-  
-  .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animateFoot 4s linear infinite !important;
+}
+@keyframes animateFoot {
+  0% {
+    background-position-x: -1000px;
   }
-  
-  .wave#wave3 {
-    z-index: 1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animateWaves 3s linear infinite;
+  100% {
+    background-positon-x: 0px;
   }
-  
-  .wave#wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animateFoot 3s linear infinite;
-  }
-  
-  @keyframes animateWaves {
-    0% {
-      background-position-x: 1000px;
-    }
-    100% {
-      background-position-x: 0px;
-    }
-  }
-  
-  @keyframes animateFoot {
-    0% {
-      background-position-x: -1000px;
-    }
-    100% {
-      background-position-x: 0px;
-    }
-  }
+}
+
