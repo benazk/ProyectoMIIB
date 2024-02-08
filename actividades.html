@@ -18,19 +18,51 @@
     </ul>
   </nav>
   <section>
-    <select name="zona" id="zona" class="form__input">
+    <select name="zona" id="zona" class="form__input" onchange="mostrarImagen()">
       <option value="0">Elige la zona</option>
-      <option value="1"><img src="kayak.jpg" alt="Kayak">Kayak</option>
-      <option value="2"><img src="tenis.jpg" alt="Tenis">Tenis</option>
-      <option value="3"><img src="gimnasio.jpg" alt="Gimnasio">Gimnasio</option>
-      <option value="4"><img src="yoga.jpg" alt="Yoga">Yoga</option>
-      <option value="5"><img src="pilates.jpg" alt="Pilates">Pilates</option>
-      <option value="6"><img src="golf.jpg" alt="Golf">Golf</option>
-      <option value="7"><img src="surf.jpg" alt="Surf">Surf</option>
-      <option value="8"><img src="baloncesto_futbol.jpg" alt="Baloncesto/Fútbol">Baloncesto/Fútbol</option>
-      <option value="9"><img src="anaerobicos.jpg" alt="Anaeróbicos">Anaeróbicos</option>
-      <option value="10"><img src="piscina.jpg" alt="Piscina">Piscina</option>
+      <option value="1" data-imagen="kayak.jpg">Kayak</option>
+      <option value="2" data-imagen="tenis.jpg">Tenis</option>
+      <option value="3" data-imagen="gimnasio.jpg">Gimnasio</option>
+      <option value="4" data-imagen="yoga.jpg">Yoga</option>
+      <option value="5" data-imagen="pilates.jpg">Pilates</option>
+      <option value="6" data-imagen="golf.jpg">Golf</option>
+      <option value="7" data-imagen="surf.jpg">Surf</option>
+      <option value="8" data-imagen="baloncesto_futbol.jpg">Baloncesto/Fútbol</option>
+      <option value="10" data-imagen="piscina.jpg">Piscina</option>
     </select>
+    <div id="imagenSeleccionada">
+      <img src="" alt="" id="imagenZona">
+    </div>
   </section>
+
+  <script>
+    function mostrarImagen() {
+      var zonaSeleccionada = document.getElementById("zona");
+      var imagenSeleccionada = document.getElementById("imagenZona");
+      var rutaImagen = "";
+      
+      if (zonaSeleccionada.value === "1") {
+        rutaImagen = "imagenes/kayak.jpg";
+      } else if (zonaSeleccionada.value === "2") {
+        rutaImagen = "imagenes/tenis.jpg";
+      } else if (zonaSeleccionada.value === "3") {
+        rutaImagen = "imagenes/gimnasio.jpg";
+      } else if (zonaSeleccionada.value === "4") {
+        rutaImagen = "imagenes/yoga.jpg";
+      } else if (zonaSeleccionada.value === "5") {
+        rutaImagen = "imagenes/pilates.jpg";
+      } else if (zonaSeleccionada.value === "6") {
+        rutaImagen = "imagenes/golf.jpg";
+      } else if (zonaSeleccionada.value === "7") {
+        rutaImagen = "imagenes/surf.jpg";
+      } else if (zonaSeleccionada.value === "8") {
+        rutaImagen = "imagenes/baloncesto.avif";
+      } else if (zonaSeleccionada.value === "10") {
+        rutaImagen = "imagenes/piscina.jpg";
+      }
+
+      imagenSeleccionada.src = rutaImagen;
+    }
+  </script>
 </body>
 </html>
