@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de Empleo</title>
-    <link rel="stylesheet" href="empleo.css"> 
+    <link rel="stylesheet" href="empleo.css">
 </head>
 
 <body>
     <div class="container">
         <h1>Solicitud de Empleo</h1>
-        <form class="form" action="empleo.php" method="POST"> 
+        <form class="form" action="empleo.php" method="POST" onsubmit="return Mensaje()">
             <!-- Nombre -->
             <div class="form__group">
                 <input type="text" class="form__input" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -61,7 +61,7 @@
         </form>
     </div>
 
-    <script>
+    <script type="text/javascript">
         // Script para ajustar dinámicamente el salario, la visibilidad del campo de sector, y asignar idMesa/idZona
         const puestoInput = document.getElementById('puesto');
         const salarioInput = document.getElementById('salario');
@@ -102,6 +102,23 @@
                 idZonaInput.value = ''; // Resetear idZona
             }
         });
+        function Mensaje() {
+            // variables en las que guardo los datos de los campos
+            var nombre = document.forms["formemp"]["nombre"].value;
+            var puesto = document.forms["formemp"]["puesto"].value;
+            var salario = document.forms["formemp"]["salario"].value;
+            var telefono = document.forms["formemp"]["telefono"].value;
+            var sector = document.forms["formemp"]["sector"].value;
+            // muestra un pop up, si todos los campos estan completos, te da la bienvenida. Si no, te da error al insertar los datos y vuelve al punto de partida
+            if (nombre == "" || puesto == "" || salario == "" || telefono == "" || sector == "") {
+                window.alert("Error al insertar los datos, inténtelo de nuevo");
+                return false; // Evitar el envío del formulario si hay un error
+            }
+            else {
+                return true; // Enviar el formulario en caso de que todos los datos sean correctos
+            }
+        }
+
     </script>
 
 </body>

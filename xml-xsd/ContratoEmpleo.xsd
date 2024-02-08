@@ -1,4 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" xml:long="es">
-<xs:element name="ContratoEmpleo"></xs:element>
+<xs:element name="ContratoEmpleo">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Empleado">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="NombreE">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[A-Z]{1}[a-z]*\s[A-Z]{1}[a-z]*"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="PuestoTrabajo">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Cocinero/a"/>
+                                    <xs:enumeration value="Camarero/a"/>
+                                    <xs:enumeration value="Personal de Limpieza"/>
+                                    <xs:enumeration value="Entrenador/a"/>
+                                    <xs:enumeration value="Recepcionista"/>                                    
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Salario">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                    <xs:minInclusive value="1300"/>
+                                    <xs:maxInclusive value="2000"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Telefono">
+                            <xs:simpleType>
+                            <xs:restriction base="xs:string">   
+                                    <xs:pattern value="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Sector">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Gimnasio"/>
+                                    <xs:enumeration value="Restaurante"/>                                    
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="idMesa" type="MesaType" use="required"/>
+                    <xs:attribute name="idZona" type="ZonaType" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+<xs:simpleType name="MesaType">
+    <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="40"/>
+    </xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="ZonaType">
+    <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="9"/>
+    </xs:restriction>
+</xs:simpleType>
 </xs:schema>

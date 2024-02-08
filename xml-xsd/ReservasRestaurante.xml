@@ -1,11 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <reservaRestaurante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ReservasRestaurante.xsd">
     <Reserva>        
-        <Nombre>Benat</Nombre>
-        <Apellido>Ezquerro</Apellido>
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
         <Correo>bezquerro@gmail.com</Correo>
         <Telefono>+34666555222</Telefono>
-        <Fecha>2024-02-18T11:30:00</Fecha>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Benat</NombreC>
+        <ApellidoC>Ezquerro</ApellidoC>
+        <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666555222</Telefono>
+        <DiayHora>2024-02-18T11:30:00</DiayHora>
         <tipoMenu>Menu Proteinico</tipoMenu>
     </Reserva>
 </reservaRestaurante>
