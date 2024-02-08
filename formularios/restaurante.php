@@ -3,6 +3,28 @@
 <head>
     <title>Restaurante</title>
     <link rel="stylesheet" href="rest.css">
+    <script type="text/javascript">
+funcion Mensaje(){
+      window.alert("nombre");
+      // variables en las que guardo los datos de los campos
+      var nombre = document.forms["formRest"]["nombre"].value;
+      var apellido = document.forms["formRest"]["apellidos"].value;
+      var email = document.forms["formRest"]["email"].value;
+      var telefono = document.forms["formRest"]["telefono"].value;
+      var menu = document.forms["formRest"]["menu"].value;
+      var fecha = document.forms["formRest"]["fecha"].value;
+      var nombre_apellido = nombre + " " + apellido;
+      window.alert("Error al insertar los datos, inténtelo de nuevo");
+      // muestra un pop up, si todos los campos estan completos, te da la bienvenida. Si no, te da error al insertar los datos y vuelve al punto de partida
+      if (nombre == "" || apellido == "" || fecha == "" || email == "" || telefono == "" || menu == "" || fecha == "" ) {
+        window.alert("Error al insertar los datos, inténtelo de nuevo");
+        return false; // Evitar el envío del formulario si hay un error
+      }
+      else {
+        return true; // Enviar el formulario en caso de que todos los datos sean correctos
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -10,7 +32,7 @@
     <div class="container">
         <h2>¡Rellena el formulario!</h2>
         <!-- Formulario de reserva en el restaurante -->
-        <form action="#" method="POST" class="form">
+        <form action="restauranteform.php" name="formRest" onsubmit="return Mensaje()" method="POST" class="form">
 
             <input type="text" placeholder="Nombre" class="form__input" id="nombre" name="nombre" />
             <label for="name" class="form__label">Nombre</label>
@@ -38,86 +60,10 @@
 
             <input type="datetime-local" placeholder="Extra" class="form__input" id="fecha" name="fecha" />
             <label for="subject" class="form__label"></label>
-            <input type="hidden" value="restaurante" name="restaurante" id="restaurante">
 
-            <input type="submit" value="Enviar Reserva" class="form__input" id="subject" onsubmit="return Mensaje();" />
+            <input type="submit" value="Enviar Reserva" class="form__input" id="subject" />
         </form>
     </div>
-
-    <script type="text/javascript">
-        function Mensaje() {
-            // variables en las que guardo los datos de los campos
-            var nombre = document.getElementById("nombre").value;
-            var apellido = document.getElementById("apellido").value;
-            var email = document.getElementById("email").value;
-            var telefono = document.getElementById("Telefono").value;
-            var suscripcion = document.getElementById("menu").value;
-            var fecha = document.getElementById("fecha").value;
-            var nombre_apellido = nombre + ' ' + apellido;
-            // muestra un pop up, si todos los campos estan completos, te da la bienvenida. Si no, te da error al insertar los datos y vuelve al punto de partida
-            if (nombre.length !== 0 && apellido.length !== 0 && fecha.length !== 0 && email.length !== 0 && telefono.length !== 0 && suscripcion.length !== 0) {
-                window.alert("Bienvenido " + nombre_apellido + " de correo " + email);
-                setTimeout(function () {
-                    document.getElementById("subject").disabled = true; // Deshabilitar el botón después de hacer clic
-                    setTimeout(function () {
-                        document.getElementById("subject").disabled = false; // Habilitar el botón después de 5 segundos
-                    }, 5000);
-                }, 1); // Agregar un pequeño retraso antes de deshabilitar el botón
-                window.location.href("../index.html")
-                return true; // Permitir el envío del formulario después del retraso
-            } else {
-                window.alert("Error al insertar los datos, inténtelo de nuevo");
-                setTimeout(function () {
-                    window.location.reload();
-                }, 5000);
-                return false; // Evitar el envío del formulario si hay un error
-            }
-        }
-    </script>
-
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") { // Solo ejecutar este código si el formulario se ha enviado
-        // Guardo el contenido de los campos en variables de php
-        $nombre = $_POST["nombre"];
-        $apellidos = $_POST["apellido"];
-        $email = $_POST["email"];
-        $telefono = $_POST["telefono"];
-        $fecha = $_POST["fecha"];
-        $fecha_format = substr($fecha, 0, 10) . ' ' . substr($fecha, 11, 5) . ':00';
-        $menu = $_POST["menu"];
-        $mesa = rand(1, 40);
-        $cod = "A";
-        $num_mesa = $mesa . '' . $cod;
-
-        // Variables con las credenciales del servidor/base de datos
-        $servidor = "dbrds.c1cqmqwa0ite.us-east-1.rds.amazonaws.com";
-        $usuario = "admin";
-        $password = "ASdiioqw--ad45";
-        $basedatos = "BBDDProyectoGym1";
-
-        // Crear conexión usando las credenciales
-        $conn = new mysqli($servidor, $usuario, $password, $basedatos);
-
-        // Verificar conexión
-        if ($conn->connect_error) {
-            die("Conexión fallida: " . $conn->connect_error);
-        }
-        // Variables en las que guardo consultas a la base de datos ("$sql_comensales" y "$sql_servir")
-        $sql_comensales = "INSERT INTO Comensales (NombreC, ApellidoC, Email, Telefono, DiaYHora, idMesa, idMenu)
-VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_format', '$mesa', '$menu');";
-        // Función para ejecutar la consulta 
-        $conn->query($sql_comensales);
-
-
-        $sql_servir = "INSERT INTO SeSirve (idMesa, idMenu) VALUES ('$mesa', '$menu');";
-        $conn->query($sql_servir);
-        echo "<script type='text/javascript'>Mensaje();</script>";
-
-        // Cerrar conexión
-        $conn->close();
-    }
-    ?>
-
 </body>
 
 </html>
