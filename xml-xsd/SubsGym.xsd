@@ -3,24 +3,24 @@
     <xs:element name="Suscripcion">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Suscripcion">
+                <xs:element name="Suscripcion" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="Nombre">
+                            <xs:element name="NombreD">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:pattern value="[A-Z]{1}[a-z]*"></xs:pattern>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="Apellido">
+                            <xs:element name="ApellidoD">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:pattern value="[A-Z]{1}[a-z]*"></xs:pattern>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="Correo">
+                            <xs:element name="Email">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:pattern
@@ -35,7 +35,7 @@
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="Fecha" type="xs:dateTime" />
+                            <xs:element name="FechaInicio" type="xs:dateTime" />
                             <xs:element name="tipoSubs">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
@@ -47,6 +47,21 @@
                                         <xs:enumeration value="Dos meses" />
                                         <xs:enumeration value="Seis Meses" />
                                         <xs:enumeration value="Anual" />                                        
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Zona">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="kayak"/>
+                                        <xs:enumeration value="Tenis Zona"/>
+                                        <xs:enumeration value="Gimnasio Zona"/>
+                                        <xs:enumeration value="Yoga Zona"/>
+                                        <xs:enumeration value="Pilates Zona"/>
+                                        <xs:enumeration value="Golf Zona"/>
+                                        <xs:enumeration value="Surf Zona"/>
+                                        <xs:enumeration value="Baloncesto/Futbol Zona"/>
+                                        <xs:enumeration value="Piscina Zona"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>

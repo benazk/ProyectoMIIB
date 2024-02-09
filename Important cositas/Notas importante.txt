@@ -1,2 +1,0 @@
-https://www.roseindia.net/java/example/java/swing/jtable-display-database-data.shtml
-systemctl start <nombre de proceso> (inicia un proceso)

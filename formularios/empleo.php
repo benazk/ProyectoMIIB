@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<body>
+
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -29,18 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // SQL para insertar en la tabla Empleados
     $sql_empleados = "INSERT INTO Empleados (NombreE, PuestoTrabajo, Salario, Telefono, Sector, idMesa, idZona)
                       VALUES ('$nombre', '$puesto', '$salario', '$telefono', '$sector', '$idMesa', '$idZona');";
-
-    // Ejecutar la consulta
-    if ($conn->query($sql_empleados) === TRUE) {
-        echo "Solicitud de empleo enviada satisfactoriamente";
-    } else {
-        echo "Error: " . $sql_empleados . "<br>" . $conn->error;
+        
+        // Ejecutar la consulta
+        $conn->query($sql_empleados);
+        echo "<h1 style= 'font-family:Poppins, sans-serif; text-align:center;'>Gracias por rellenar el formulario de aplicacion a un trabajo</h1>";
+        echo "<h2 style= 'font-family:Poppins, sans-serif;  text-align:center;'><a href='../index.html' style= ' color:#5cccfc;'>Volver al Menú</a></h2>";
+        // Cerrar conexión
+        $conn->close();
     }
-
-    // Cerrar conexión
-    $conn->close();
-}
-?>
+    ?>
 
 </body>
 </html>

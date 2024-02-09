@@ -3,17 +3,17 @@
     <xs:element name="reservaRestaurante">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Reserva">
+                <xs:element name="Reserva" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="Nombre">
+                            <xs:element name="NombreC">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:pattern value="[A-Z]{1}[a-z]*"></xs:pattern>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="Apellido">
+                            <xs:element name="ApellidoC">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:pattern value="[A-Z]{1}[a-z]*"></xs:pattern>
@@ -35,19 +35,19 @@
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="Fecha" type="xs:dateTime" />
+                            <xs:element name="DiayHora" type="xs:dateTime" />
                             <xs:element name="tipoMenu">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:enumeration value="Pescado + postre" />
-                                        <xs:enumeration value="Marisco" />
-                                        <xs:enumeration value="Carne" />
-                                        <xs:enumeration value="Pollo" />
-                                        <xs:enumeration value="Sopa" />
-                                        <xs:enumeration value="Ensalada" />
+                                        <xs:enumeration value="Marisco + postre" />
+                                        <xs:enumeration value="Carne + postre" />
+                                        <xs:enumeration value="Pollo + postre" />
+                                        <xs:enumeration value="Sopa + postre" />
+                                        <xs:enumeration value="Ensalada + postre" />
                                         <xs:enumeration value="Menu Vegano" />
                                         <xs:enumeration value="Menu Proteinico" />
-                                        <xs:enumeration value="Legumbres" />
+                                        <xs:enumeration value="Legumbres + postre" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
