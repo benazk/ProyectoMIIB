@@ -59,33 +59,10 @@ a:hover {
   bottom: 20px;
   animation: animateFoot 3s linear infinite;
 }
-/* Olas */
-@keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
-  }
-<<<<<<< HEAD
+
   #atras{
     height: 50px;
     width: auto;
   }
-  .wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWaves 4s linear infinite;
-=======
-  100% {
-    background-positon-x: 0px;
->>>>>>> 8c0eead6ba69e4829edc8ce8d0622436785d448d
-  }
-}
-@keyframes animateFoot {
-  0% {
-    background-position-x: -1000px;
-  }
-  100% {
-    background-positon-x: 0px;
-  }
-}
+  
 
