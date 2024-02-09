@@ -4,80 +4,80 @@
         <NombreC>Benat</NombreC>
         <ApellidoC>Ezquerro</ApellidoC>
         <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666781322</Telefono>
+        <DiayHora>2024-08-11T22:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Ivan</NombreC>
+        <ApellidoC>Boiev</ApellidoC>
+        <Correo>ivboiev@gmail.com</Correo>
         <Telefono>+34666555222</Telefono>
         <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
+        <tipoMenu>Legumbres + postre</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Imanol</NombreC>
+        <ApellidoC>Perez</ApellidoC>
+        <Correo>imperez@gmail.com</Correo>
+        <Telefono>+34645985222</Telefono>
+        <DiayHora>2025-11-10T09:30:00</DiayHora>
+        <tipoMenu>Marisco + postre</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Markel</NombreC>
+        <ApellidoC>Irastorza</ApellidoC>
+        <Correo>mairastorza@gmail.com</Correo>
+        <Telefono>+34666557856</Telefono>
+        <DiayHora>2025-06-09T11:30:00</DiayHora>
+        <tipoMenu>Carne + postre</tipoMenu>
     </Reserva>
     <Reserva>        
         <NombreC>Benat</NombreC>
         <ApellidoC>Ezquerro</ApellidoC>
         <Correo>bezquerro@gmail.com</Correo>
+        <Telefono>+34666781322</Telefono>
+        <DiayHora>2024-08-11T22:30:00</DiayHora>
+        <tipoMenu>Menu Proteinico</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Ivan</NombreC>
+        <ApellidoC>Boiev</ApellidoC>
+        <Correo>ivboiev@gmail.com</Correo>
         <Telefono>+34666555222</Telefono>
         <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
+        <tipoMenu>Legumbres + postre</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Imanol</NombreC>
+        <ApellidoC>Perez</ApellidoC>
+        <Correo>imperez@gmail.com</Correo>
+        <Telefono>+34645985222</Telefono>
+        <DiayHora>2025-11-10T09:30:00</DiayHora>
+        <tipoMenu>Marisco + postre</tipoMenu>
+    </Reserva>
+    <Reserva>        
+        <NombreC>Markel</NombreC>
+        <ApellidoC>Irastorza</ApellidoC>
+        <Correo>mairastorza@gmail.com</Correo>
+        <Telefono>+34666557856</Telefono>
+        <DiayHora>2025-06-09T11:30:00</DiayHora>
+        <tipoMenu>Carne + postre</tipoMenu>
     </Reserva>
     <Reserva>        
         <NombreC>Benat</NombreC>
         <ApellidoC>Ezquerro</ApellidoC>
         <Correo>bezquerro@gmail.com</Correo>
-        <Telefono>+34666555222</Telefono>
-        <DiayHora>2024-02-18T11:30:00</DiayHora>
+        <Telefono>+34666781322</Telefono>
+        <DiayHora>2024-08-11T22:30:00</DiayHora>
         <tipoMenu>Menu Proteinico</tipoMenu>
     </Reserva>
     <Reserva>        
-        <NombreC>Benat</NombreC>
-        <ApellidoC>Ezquerro</ApellidoC>
-        <Correo>bezquerro@gmail.com</Correo>
+        <NombreC>Ivan</NombreC>
+        <ApellidoC>Boiev</ApellidoC>
+        <Correo>ivboiev@gmail.com</Correo>
         <Telefono>+34666555222</Telefono>
         <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
-    </Reserva>
-    <Reserva>        
-        <NombreC>Benat</NombreC>
-        <ApellidoC>Ezquerro</ApellidoC>
-        <Correo>bezquerro@gmail.com</Correo>
-        <Telefono>+34666555222</Telefono>
-        <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
-    </Reserva>
-    <Reserva>        
-        <NombreC>Benat</NombreC>
-        <ApellidoC>Ezquerro</ApellidoC>
-        <Correo>bezquerro@gmail.com</Correo>
-        <Telefono>+34666555222</Telefono>
-        <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
-    </Reserva>
-    <Reserva>        
-        <NombreC>Benat</NombreC>
-        <ApellidoC>Ezquerro</ApellidoC>
-        <Correo>bezquerro@gmail.com</Correo>
-        <Telefono>+34666555222</Telefono>
-        <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
-    </Reserva>
-    <Reserva>        
-        <NombreC>Benat</NombreC>
-        <ApellidoC>Ezquerro</ApellidoC>
-        <Correo>bezquerro@gmail.com</Correo>
-        <Telefono>+34666555222</Telefono>
-        <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
-    </Reserva>
-    <Reserva>        
-        <NombreC>Benat</NombreC>
-        <ApellidoC>Ezquerro</ApellidoC>
-        <Correo>bezquerro@gmail.com</Correo>
-        <Telefono>+34666555222</Telefono>
-        <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
-    </Reserva>
-    <Reserva>        
-        <NombreC>Benat</NombreC>
-        <ApellidoC>Ezquerro</ApellidoC>
-        <Correo>bezquerro@gmail.com</Correo>
-        <Telefono>+34666555222</Telefono>
-        <DiayHora>2024-02-18T11:30:00</DiayHora>
-        <tipoMenu>Menu Proteinico</tipoMenu>
+        <tipoMenu>Legumbres + postre</tipoMenu>
     </Reserva>
 </reservaRestaurante>

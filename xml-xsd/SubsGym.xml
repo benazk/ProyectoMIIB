@@ -5,81 +5,90 @@
         <NombreD>Benat</NombreD>
         <ApellidoD>Ezquerro</ApellidoD>
         <Email>bezquerro@gmail.com</Email>
-        <Telefono>+34666555222</Telefono>
+        <Telefono>+34666596572</Telefono>
         <FechaInicio>2024-02-18T11:30:00</FechaInicio>
         <tipoSubs>Semanal</tipoSubs>
         <Zona>kayak</Zona>
     </Suscripcion>
     <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
+        <NombreD>Ivan</NombreD>
+        <ApellidoD>Boiev</ApellidoD>
+        <Email>ivboiev@gmail.com</Email>
+        <Telefono>+34666325422</Telefono>
+        <FechaInicio>2024-05-11T12:35:00</FechaInicio>
         <tipoSubs>Mensual</tipoSubs>
+        <Zona>Gimnasio Zona</Zona>
+    </Suscripcion>
+    <Suscripcion>
+        <NombreD>Imanol</NombreD>
+        <ApellidoD>Perez</ApellidoD>
+        <Email>imperez@gmail.com</Email>
+        <Telefono>+34666555222</Telefono>
+        <FechaInicio>2026-01-19T20:30:00</FechaInicio>
+        <tipoSubs>Una Sesion</tipoSubs>
         <Zona>Tenis Zona</Zona>
     </Suscripcion>
     <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
+        <NombreD>Markel</NombreD>
+        <ApellidoD>Irastorza</ApellidoD>
+        <Email>mairastorza@gmail.com</Email>
+        <Telefono>+34666568922</Telefono>
+        <FechaInicio>2025-04-11T15:20:00</FechaInicio>
+        <tipoSubs>Dos meses</tipoSubs>
+        <Zona>Baloncesto/Futbol Zona</Zona>
+    </Suscripcion>
+    <Suscripcion>
+        <NombreD>Benat</NombreD>
+        <ApellidoD>Ezquerro</ApellidoD>
+        <Email>bezquerro@gmail.com</Email>
+        <Telefono>+34666596572</Telefono>
+        <FechaInicio>2024-02-18T11:30:00</FechaInicio>
+        <tipoSubs>Semanal</tipoSubs>
+        <Zona>kayak</Zona>
+    </Suscripcion>
+    <Suscripcion>
+        <NombreD>Ivan</NombreD>
+        <ApellidoD>Boiev</ApellidoD>
+        <Email>ivboiev@gmail.com</Email>
+        <Telefono>+34666325422</Telefono>
+        <FechaInicio>2024-05-11T12:35:00</FechaInicio>
         <tipoSubs>Mensual</tipoSubs>
+        <Zona>Gimnasio Zona</Zona>
+    </Suscripcion>
+    <Suscripcion>
+        <NombreD>Imanol</NombreD>
+        <ApellidoD>Perez</ApellidoD>
+        <Email>imperez@gmail.com</Email>
+        <Telefono>+34666555222</Telefono>
+        <FechaInicio>2026-01-19T20:30:00</FechaInicio>
+        <tipoSubs>Una Sesion</tipoSubs>
         <Zona>Tenis Zona</Zona>
     </Suscripcion>
     <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
-        <tipoSubs>Mensual</tipoSubs>
-        <Zona>Tenis Zona</Zona>
+        <NombreD>Markel</NombreD>
+        <ApellidoD>Irastorza</ApellidoD>
+        <Email>mairastorza@gmail.com</Email>
+        <Telefono>+34666568922</Telefono>
+        <FechaInicio>2025-04-11T15:20:00</FechaInicio>
+        <tipoSubs>Dos meses</tipoSubs>
+        <Zona>Baloncesto/Futbol Zona</Zona>
     </Suscripcion>
     <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
-        <tipoSubs>Mensual</tipoSubs>
-        <Zona>Tenis Zona</Zona>
+        <NombreD>Benat</NombreD>
+        <ApellidoD>Ezquerro</ApellidoD>
+        <Email>bezquerro@gmail.com</Email>
+        <Telefono>+34666596572</Telefono>
+        <FechaInicio>2024-02-18T11:30:00</FechaInicio>
+        <tipoSubs>Semanal</tipoSubs>
+        <Zona>kayak</Zona>
     </Suscripcion>
     <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
+        <NombreD>Ivan</NombreD>
+        <ApellidoD>Boiev</ApellidoD>
+        <Email>ivboiev@gmail.com</Email>
+        <Telefono>+34666325422</Telefono>
+        <FechaInicio>2024-05-11T12:35:00</FechaInicio>
         <tipoSubs>Mensual</tipoSubs>
-        <Zona>Tenis Zona</Zona>
-    </Suscripcion>
-    <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
-        <tipoSubs>Mensual</tipoSubs>
-        <Zona>Tenis Zona</Zona>
-    </Suscripcion>
-    <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
-        <tipoSubs>Mensual</tipoSubs>
-        <Zona>Tenis Zona</Zona>
-    </Suscripcion>
-    <Suscripcion>
-        <NombreD>Alaion</NombreD>
-        <ApellidoD>Oaline</ApellidoD>
-        <Email>adjkaajsd@gmail.com</Email>
-        <Telefono>+34666255222</Telefono>
-        <FechaInicio>2024-02-16T21:20:00</FechaInicio>
-        <tipoSubs>Mensual</tipoSubs>
-        <Zona>Tenis Zona</Zona>
+        <Zona>Gimnasio Zona</Zona>
     </Suscripcion>
 </Suscripcion>

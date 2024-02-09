@@ -14,11 +14,11 @@
         <Telefono>+34689541235</Telefono>
         <Sector>Restaurante</Sector>
     </Empleado>
-    <Empleado idMesa="2" idZona="0">
-        <NombreE>Juan Gomez</NombreE>
-        <PuestoTrabajo>Camarero/a</PuestoTrabajo>
-        <Salario>1300</Salario>
-        <Telefono>+34658669933</Telefono>
+    <Empleado idMesa="0" idZona="2">
+        <NombreE>Ivan Boiev</NombreE>
+        <PuestoTrabajo>Entrenador/a</PuestoTrabajo>
+        <Salario>1600</Salario>
+        <Telefono>+34655669933</Telefono>
         <Sector>Gimnasio</Sector>
     </Empleado>
     <Empleado idMesa="2" idZona="0">
@@ -26,6 +26,20 @@
         <PuestoTrabajo>Camarero/a</PuestoTrabajo>
         <Salario>1300</Salario>
         <Telefono>+34658669933</Telefono>
+        <Sector>Restaurante</Sector>
+    </Empleado>
+    <Empleado idMesa="5" idZona="0">
+        <NombreE>Benat Ezquerro</NombreE>
+        <PuestoTrabajo>Cocinero/a</PuestoTrabajo>
+        <Salario>2000</Salario>
+        <Telefono>+34689541235</Telefono>
+        <Sector>Restaurante</Sector>
+    </Empleado>
+    <Empleado idMesa="0" idZona="2">
+        <NombreE>Ivan Boiev</NombreE>
+        <PuestoTrabajo>Entrenador/a</PuestoTrabajo>
+        <Salario>1600</Salario>
+        <Telefono>+34655669933</Telefono>
         <Sector>Gimnasio</Sector>
     </Empleado>
     <Empleado idMesa="2" idZona="0">
@@ -33,6 +47,20 @@
         <PuestoTrabajo>Camarero/a</PuestoTrabajo>
         <Salario>1300</Salario>
         <Telefono>+34658669933</Telefono>
+        <Sector>Restaurante</Sector>
+    </Empleado>
+    <Empleado idMesa="5" idZona="0">
+        <NombreE>Benat Ezquerro</NombreE>
+        <PuestoTrabajo>Cocinero/a</PuestoTrabajo>
+        <Salario>2000</Salario>
+        <Telefono>+34689541235</Telefono>
+        <Sector>Restaurante</Sector>
+    </Empleado>
+    <Empleado idMesa="0" idZona="2">
+        <NombreE>Ivan Boiev</NombreE>
+        <PuestoTrabajo>Entrenador/a</PuestoTrabajo>
+        <Salario>1600</Salario>
+        <Telefono>+34655669933</Telefono>
         <Sector>Gimnasio</Sector>
     </Empleado>
     <Empleado idMesa="2" idZona="0">
@@ -40,34 +68,6 @@
         <PuestoTrabajo>Camarero/a</PuestoTrabajo>
         <Salario>1300</Salario>
         <Telefono>+34658669933</Telefono>
-        <Sector>Gimnasio</Sector>
-    </Empleado>
-    <Empleado idMesa="2" idZona="0">
-        <NombreE>Juan Gomez</NombreE>
-        <PuestoTrabajo>Camarero/a</PuestoTrabajo>
-        <Salario>1300</Salario>
-        <Telefono>+34658669933</Telefono>
-        <Sector>Gimnasio</Sector>
-    </Empleado>
-    <Empleado idMesa="2" idZona="0">
-        <NombreE>Juan Gomez</NombreE>
-        <PuestoTrabajo>Camarero/a</PuestoTrabajo>
-        <Salario>1300</Salario>
-        <Telefono>+34658669933</Telefono>
-        <Sector>Gimnasio</Sector>
-    </Empleado>
-    <Empleado idMesa="2" idZona="0">
-        <NombreE>Juan Gomez</NombreE>
-        <PuestoTrabajo>Camarero/a</PuestoTrabajo>
-        <Salario>1300</Salario>
-        <Telefono>+34658669933</Telefono>
-        <Sector>Gimnasio</Sector>
-    </Empleado>
-    <Empleado idMesa="2" idZona="0">
-        <NombreE>Juan Gomez</NombreE>
-        <PuestoTrabajo>Camarero/a</PuestoTrabajo>
-        <Salario>1300</Salario>
-        <Telefono>+34658669933</Telefono>
-        <Sector>Gimnasio</Sector>
+        <Sector>Restaurante</Sector>
     </Empleado>
 </ContratoEmpleo>
